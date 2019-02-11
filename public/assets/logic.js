@@ -115,7 +115,6 @@ const workout = {
   UserId: 1
 }
 
-console.log(workout);
 // login modal logic
 
 $("#login-btn").click(function(){
@@ -135,5 +134,4 @@ $("#join-btn").click(function(){
   console.log(signUpPassword);
   location.href = "profile.html";
   });
-
 

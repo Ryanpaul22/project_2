@@ -12,7 +12,8 @@ CREATE TABLE workouts (
   exercise VARCHAR(45) NULL,
   setNum INT NOT NULL,
   repNum int not null,
-
   PRIMARY KEY (id)
 );
 
+-- just for push
+  
