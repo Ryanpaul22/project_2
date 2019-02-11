@@ -1,4 +1,3 @@
-Tony [12:29 PM]
 const workout = {
  date: "2019-02-11",
  workoutData: [
@@ -115,3 +114,24 @@ const workout = {
  ],
  UserId: 1
 }
+// login modal logic
+
+$("#login-btn").click(function(){
+    var loginEmail = $("#loginForm-email").val().trim();
+    console.log(loginEmail);
+    var loginPassword = $("#loginForm-password").val().trim();
+    console.log(loginPassword);
+    location.href = "profile.html";
+    });
+
+// sign up modal logic
+
+$("#join-btn").click(function(){
+  var signUpEmail = $("#signUpForm-email").val().trim();
+  console.log(signUpEmail);
+  var signUpPassword = $("#signUpForm-password").val().trim();
+  console.log(signUpPassword);
+  location.href = "profile.html";
+  });
+
+
