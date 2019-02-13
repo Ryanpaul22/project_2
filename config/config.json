@@ -1,35 +1,24 @@
 {
-  "development": {
-    "username": "root",
-<<<<<<< HEAD
-    "password": null,
-=======
-    "password": "root",
->>>>>>> 296c1b3a71ba60706e2eaa02ca348e01347b0890
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-<<<<<<< HEAD
-    "password": null,
-=======
-    "password": "root",
->>>>>>> 296c1b3a71ba60706e2eaa02ca348e01347b0890
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-<<<<<<< HEAD
-    "password": null,
-=======
-    "password": "root",
->>>>>>> 296c1b3a71ba60706e2eaa02ca348e01347b0890
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "development": {
+      "username": "root",
+      "password": null,
+      "database": "sequelize_json",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "root",
+      "password": null,
+      "database": "database_test",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "root",
+      "password": null,
+      "database": "database_production",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    }
   }
-}
+  
