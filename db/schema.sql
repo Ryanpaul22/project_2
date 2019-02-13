@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS LiftBuddy_db;
 CREATE DATABASE LiftBuddy_db;
 DROP DATABASE IF EXISTS lifingbuddies_db;
 
-CREATE DATABASE liftingbuddies_db;
+CREATE DATABASE sequelize_json;
 
 USE LiftBuddy_db;
 
