@@ -7,41 +7,43 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./assets/style.css">
   <title>Your Profile</title>
 </head>
 
 <body>
-  <div class="container">
-    <div class="jumbotron">
-      <h1> Welcome to your profile!</h1>
-      <!-- navbar-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light float-right">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Menu
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Friends</a>
-                <a class="dropdown-item" href="#">Calendar</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-        </div>
-      </nav>
-      <!--end navbar-->
+  <!-- navbar-->
+  <nav class="navbar navbar-light bg-light">
+    <div class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+        <img src="./assets/images/nav-icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Friends</a>
+        <a class="dropdown-item" href="#">Calendar</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Contact Us</a>
+      </div>
     </div>
+  </nav>
+  <!--end navbar-->
+
+  <div class="jumbotron bg-info text-center">
+    <h1 class="display-4">Lift Buddy</h1>
   </div>
 
-  <div class="container">
+  <div class="container" id="profile-main-body">
     <div class="row">
       <!-- left column : social -->
       <!--skipped left for now-->
-      <div class="col-4 border border-success">
+      <div class="col-4 mx-auto border border-success">
+        <p>column 1</p>
+        <p>column 1</p>
+        <p>column 1</p>
+        <p>column 1</p>
+        <p>column 1</p>
+        <p>column 1</p>
+        <p>column 1</p>
         <p>column 1</p>
         <div>
           <!-- profile-->
@@ -55,70 +57,79 @@
       </div>
 
       <!-- center column-->
-      <div class="col-6 border border-success">
+      <div class="col-5 mx-auto border border-success">
         <p>column 2</p>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+
+        <!-- add workout button -->
+        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#add-workout">
           Add Workout
         </button>
 
-        <!-- add workout button -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
+        <!-- button modal-->
+        <div class="modal fade" id="add-workout" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Workout</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+                <h5 class="modal-title" id="add-workout-label">Add Workout</h5>
               </div>
               <div class="modal-body">
                 <form>
                   <div class="form-group">
+                      <div class="form-group">
+                          <label>Date Of Workout</label>
+                          <input required type="date" class="form-control" id="date-input">
+                        </div>
                     <select class="form-control" id="muscle-group">
                       <option selected disabled>Choose a muscle group</option>
                       <option>Chest</option>
                       <option>Back</option>
                       <option>Legs</option>
-                      <option>Biceps</option>
-                      <option>Triceps</option>
+                      <option>Arms</option>
+                      <option>Shoulders</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group input-group-sm">
                     <input type="text" class="form-control" placeholder="Exercise">
                   </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Sets">
+                  <div class="form-group input-group-sm">
+                    <input type="number" class="form-control" placeholder="Sets">
                   </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Reps">
+                  <div class="form-group input-group-sm float-right">
+                    <input type="number" class="form-control" placeholder="Repetitions">
                   </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Weight">
+                  <br>
+                  <br>
+                  <div class="form-group input-group-sm float-right">
+                    <input type="number" class="form-control" placeholder="Weight (lb)">
                   </div>
 
                 </form>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary btn-sm">Add</button>
               </div>
             </div>
           </div>
         </div>
+        <!--- end button modal -->
+
         <div>
           <!--most recent workout-->
+
         </div>
+
         <div>
 
         </div>
       </div>
 
       <!-- right column : goals, achievements, etc -->
-      <div class="col-2 border border-success">
-        <p>column 3</p>
+      <div class="col-2 mx-auto border border-success">
+        <h5 class="text-center">GOALS</h5>
         <div>
           <!-- goals-->
+
         </div>
         <div>
           <!--add goals-->
