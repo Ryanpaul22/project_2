@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS liftingbuddies_db;
-CREATE DATABASE liftingbuddies_db;
+DROP DATABASE IF EXISTS LiftBuddy_db;
+CREATE DATABASE LiftBuddy_db;
 
-USE liftingbuddies_db;
+USE LiftBuddy_db;
 
 CREATE TABLE workouts (
   id INT NOT NULL AUTO_INCREMENT,
@@ -11,3 +11,8 @@ CREATE TABLE workouts (
    DATETIME default NOW(),
   PRIMARY KEY (id)
 );
+-- Insert a set of records.
+INSERT INTO exercise (chest, ) VALUES ("");
+INSERT INTO exercise (biseps, ) VALUES ("");
+INSERT INTO exercise (triceps, ) VALUES ("");
+INSERT INTO exercise (abs, ) VALUES ("");

@@ -1,4 +1,4 @@
-USE liftingbuddies_db;
+USE LiftBuddy_db;
 
  INSERT INTO workouts
   (title, body)

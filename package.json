@@ -11,10 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Ryanpaul22/project_2.git"
   },
-<<<<<<< HEAD
   "keywords": [],
-=======
->>>>>>> a3c926c24f3dd2fe6df89e8c4fcb8654d94a5960
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -23,12 +20,9 @@
   "homepage": "https://github.com/Ryanpaul22/project_2#readme",
   "dependencies": {
     "express": "^4.16.4",
-<<<<<<< HEAD
     "mysql2": "^1.6.5",
-    "sequelize": "^4.42.0"
-=======
+    "sequelize": "^4.42.0",
     "inquirer": "^6.2.2",
     "mysql": "^2.16.0"
->>>>>>> a3c926c24f3dd2fe6df89e8c4fcb8654d94a5960
   }
 }
