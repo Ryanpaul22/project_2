@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS LiftBuddy_db;
 CREATE DATABASE LiftBuddy_db;
-DROP DATABASE IF EXISTS lifingbuddies_db;
+DROP DATABASE IF EXISTS iftBuddy_db;
 
 CREATE DATABASE sequelize_json;
 

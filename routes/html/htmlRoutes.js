@@ -6,6 +6,10 @@ router.route('/').get((req, res) => {
   res.sendFile(path.join(__dirname, '../../public/home.html'));
 });
 
+router.route('/workouts').get((req, res) => {
+  res.sendFile(path.join(__dirname, '../../public/workoutForm.html'));
+});
+
 router.route('/register').get((req, res) => {
   res.sendFile(path.join(__dirname, '../../public/signup.html'));
 });

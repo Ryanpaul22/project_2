@@ -7,38 +7,20 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-<<<<<<< HEAD
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ryanpaul22/project_2.git"
-  },
-=======
->>>>>>> 9e2ccadd9f87e9d4452befa060082d9dc69fc722
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.16.4",
-<<<<<<< HEAD
     "mysql2": "^1.6.5",
     "sequelize": "^4.42.0",
     "inquirer": "^6.2.2",
-    "mysql": "^2.16.0"
-=======
     "express-session": "^1.15.6",
     "middleware": "^1.0.0",
-    "mysql": "^2.16.0",
-    "mysql2": "^1.6.5",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-<<<<<<< HEAD
-    "sequelize": "^4.42.0"
->>>>>>> 9e2ccadd9f87e9d4452befa060082d9dc69fc722
-  }
-=======
     "routes": "^2.1.0",
-    "sequelize": "^4.42.0",
     "utils": "^0.3.1"
   },
   "devDependencies": {},
@@ -50,5 +32,4 @@
     "url": "https://github.com/Ryanpaul22/project_2/issues"
   },
   "homepage": "https://github.com/Ryanpaul22/project_2#readme"
->>>>>>> ccdb945e3f4904127ff6e2341a563f928740fdd9
 }
