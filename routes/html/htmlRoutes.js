@@ -21,4 +21,14 @@ router.route('/workout-form').get((req, res) => {
   res.sendFile(path.join(__dirname, '../../public/workout.html'));
 }); 
 
+router.route('/calendar').get((req, res) => {
+  res.sendFile(path.join(__dirname, '../../public/calendar.html'));
+})
+
+router.route('/user-data-base').get((req, res) => {
+  res.sendFile(path.join(__dirname, '../../public/database.html'));
+})
+
+
+
 module.exports = router;
