@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var path = require("path");
 
 module.exports = function(app) {
@@ -19,3 +20,11 @@ module.exports = function(app) {
   });
 
 };
+=======
+const router = require('express').Router();
+const htmlRoutes = require('./htmlRoutes');
+
+router.use('/', htmlRoutes);
+
+module.exports = router;
+>>>>>>> 9e2ccadd9f87e9d4452befa060082d9dc69fc722
