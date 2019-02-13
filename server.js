@@ -1,16 +1,19 @@
-const express = require("express");
-// const routes = require("./routes");
+var express = require("express");
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+var app = express();
+var PORT = process.env.PORT || 3000;
 
-app.use(express.json());
+var db = require("./models");
+
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use(express.static("public"));
 
-// app.use(routes);
+require("./routes/api-routes.js")(app);
 
-app.listen(PORT, function () {
-    console.log("SERVER IS ON LINK http://localhost:%s", PORT);
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
