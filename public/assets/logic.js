@@ -234,7 +234,8 @@ const workout = {
       }
     ]
   },
-  // login modal logic
+  
+// login modal logic
 
   $("#login-btn").click(function () {
     var loginEmail = $("#loginForm-email").val().trim();
@@ -253,3 +254,6 @@ $("#join-btn").click(function () {
   console.log(signUpPassword);
   location.href = "profile.html";
 });
+
+
+
