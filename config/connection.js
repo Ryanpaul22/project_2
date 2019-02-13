@@ -5,8 +5,8 @@ var connection = mysql.createConnection({
   host: "localhost",
   port: 3000,
   user: "root",
-  password: "Socrates2018",
-  database: "login_db"
+  password: "dgi783aa",
+  database: "sequelize_json"
 });
 
 // Make connection.

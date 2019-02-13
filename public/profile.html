@@ -12,25 +12,26 @@
 </head>
 
 <body>
-
-      <!-- navbar-->
-      <div class="container">
-          <nav class="navbar mx-auto">
-              <div class="nav mx-auto">
-                <div class="nav-item">
-                  <a class="nav-link fa fa-user-friends" href="#"></a>
-                </div>
-                <div class="nav-item">
-                  <a class="nav-link fa fa-calendar" href="#"></a>
-                </div>
-              </div>
-          </nav>
-        </div>
-          <!--end navbar-->
   <div class="jumbotron bg-info text-center">
     <h1 class="display-4">Lift Buddy</h1>
   </div>
+  <!-- navbar-->
 
+  <nav class="navbar mx-auto">
+    <div class="nav mx-auto">
+      <div class="nav-item">
+        <a class="nav-link fa fa-user-friends" href="/friends"></a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link fa fa-calendar" href="/calendar"></a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link fa fa-dumbbell" href="/workout-form"></a>
+      </div>
+    </div>
+  </nav>
+
+  <!--end navbar-->
 
   <div class="container" id="profile-main-body">
     <div class="row">
@@ -61,9 +62,11 @@
         <p>column 2</p>
 
         <!-- add workout button -->
-        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#add-workout">
-          Add Workout
-        </button>
+        <div class="row">
+          Log a workout:
+          <button type="button" class="btn fa fa-dumbbell" href="/workout-form">
+          </button>
+        </div>
 
         <!-- button modal-->
         <div class="modal fade" id="add-workout" tabindex="-1" role="dialog">

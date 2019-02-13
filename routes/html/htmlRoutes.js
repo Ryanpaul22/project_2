@@ -3,7 +3,7 @@ const path = require('path');
 
 // only get to new posts
 router.route('/').get((req, res) => {
-  res.sendFile(path.join(__dirname, '../../public/home.html'));
+  res.sendFile(path.join(__dirname, '../../public/profile.html'));
 });
 
 router.route('/register').get((req, res) => {
@@ -18,7 +18,7 @@ router.route('/workout-form').get((req, res) => {
   if (!req.user) {
     return res.redirect('/login');
   }
-  res.sendFile(path.join(__dirname, '../../public/workoutForm.html'));
+  res.sendFile(path.join(__dirname, '../../public/workout.html'));
 }); 
 
 module.exports = router;
