@@ -1,13 +1,32 @@
-module.exports = function(sequelize, DataTypes) {
-    var Post = sequelize.define("Post", {
-      title: {
-        type: DataTypes.DATE,
-        allowNull: false,
+module.exports = function (sequelize, DataTypes) {
+
+  const Workouts = sequelize.define("Workouts", {
+    date: {
+      type: DataTypes.STRING,
+      defaultValue: DataTypes.DATE,
+      required: true
+    },
+    exercises: {
+      type: DataTypes.TEXT,
+      get() {
+        return JSON.parse(this.getDataValue('exercises'));
       },
-      workout: {
-        type: DataTypes.DATE,
+      set(value) {
+        this.setDataValue('exercises', JSON.stringify(value));
+      }
+    }
+  });
+
+  Workouts.associate = function (models) {
+
+    models.Workouts.belongsTo(models.Users, {
+      onDelete: 'CASCADE',
+      validate: {
         allowNull: false
-      },
+      }
     });
-    return Post;
-  };
+
+  }
+
+  return Workouts;
+}
