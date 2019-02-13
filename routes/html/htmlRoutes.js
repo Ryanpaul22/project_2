@@ -18,7 +18,7 @@ router.route('/workout-form').get((req, res) => {
   if (!req.user) {
     return res.redirect('/login');
   }
-  res.sendFile(path.join(__dirname, '../../public/workoutForm.html'));
+  res.sendFile(path.join(__dirname, '../../public/workout.html'));
 }); 
 
 router.route('/calendar').get((req, res) => {
