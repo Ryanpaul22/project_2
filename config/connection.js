@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Setup mySql connection
 var mysql = require("mysql");
 
@@ -20,3 +21,5 @@ connection.connect(function(err) {
   
   // Export connection for our ORM to use.
   module.exports = connection;
+=======
+>>>>>>> ccdb945e3f4904127ff6e2341a563f928740fdd9

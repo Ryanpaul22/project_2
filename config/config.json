@@ -1,21 +1,25 @@
 {
     "development": {
       "username": "root",
+<<<<<<< HEAD
       "password": "root",
+=======
+      "password": "Socrates2018",
+>>>>>>> ccdb945e3f4904127ff6e2341a563f928740fdd9
       "database": "sequelize_json",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
     "test": {
       "username": "root",
-      "password": null,
+      "password": "Socrates2018",
       "database": "database_test",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
     "production": {
       "username": "root",
-      "password": null,
+      "password": "Socrates2018",
       "database": "database_production",
       "host": "127.0.0.1",
       "dialect": "mysql"
