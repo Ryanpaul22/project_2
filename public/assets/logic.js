@@ -107,8 +107,8 @@ const workout = {
         ]
       },
       {
-        muscleGroup: 'Biceps',
-        exercise: 'Barbell Bench Press',
+        muscleGroup: 'Back',
+        exercise: 'Barbell Curl',
         sets: [{
             reps: 12,
             weight: 90
@@ -128,8 +128,8 @@ const workout = {
         ]
       },
       {
-        muscleGroup: 'Biceps',
-        exercise: 'Barbell Incline Bench',
+        muscleGroup: 'Back',
+        exercise: 'Pullups',
         sets: [{
             reps: 12,
             weight: 90
@@ -149,8 +149,8 @@ const workout = {
         ]
       },
       {
-        muscleGroup: 'Biceps',
-        exercise: 'Incline Dumbbell flyes',
+        muscleGroup: 'Back',
+        exercise: 'Bent Over Two-Dumbbell Row',
         sets: [{
             reps: 12,
             weight: 90
@@ -170,8 +170,8 @@ const workout = {
         ]
       },
       {
-        muscleGroup: 'Triceps',
-        exercise: 'Triceps Pushdown',
+        muscleGroup: 'Legs',
+        exercise: 'Seated Leg Curl',
         sets: [{
             reps: 12,
             weight: 50
@@ -191,8 +191,8 @@ const workout = {
         ]
       },
       {
-        muscleGroup: 'Triceps',
-        exercise: 'Lying Dumbell Extension',
+        muscleGroup: 'Legs',
+        exercise: 'Leg Press',
         sets: [{
             reps: 12,
             weight: 50
@@ -212,8 +212,8 @@ const workout = {
         ]
       },
       {
-        muscleGroup: 'Triceps',
-        exercise: 'Standing Calf Raises',
+        muscleGroup: 'Legs',
+        exercise: 'Jogging-Treadmill',
         sets: [{
             reps: 12,
             weight: 50
@@ -234,6 +234,7 @@ const workout = {
       }
     ]
   },
+  
   
 // login modal logic
 
