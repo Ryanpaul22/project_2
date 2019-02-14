@@ -1,37 +1,30 @@
 {
-  "name": "sequelize_json",
+  "name": "project_2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "main": "server.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
-    "middleware": "^1.0.0",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-<<<<<<< HEAD
     "sequelize": "^4.42.0"
-=======
-    "routes": "^2.1.0",
-    "sequelize": "^4.42.0",
-    "utils": "^0.3.1"
->>>>>>> 34859e1bc60cc337e374e258094865284a0f439a
   },
   "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ryanpaul22/project_2.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Ryanpaul22/project_2/issues"
   },
