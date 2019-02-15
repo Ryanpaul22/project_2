@@ -20,7 +20,7 @@ $(document).ready(function() {
             `<div class="container-fluid text-center">
             <br>
           <div><h3>${exercise.muscle_group}</h3>
-          <h4>${exercise.exercise_name}</h4>
+          <h4>${exercise.specific_exercise}</h4>
           </div>`;
           
           exercise.sets.forEach(set => {
