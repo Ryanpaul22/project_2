@@ -16,7 +16,11 @@ $(document).ready(function() {
             `<div class="container-fluid text-center">
             <br>
           <div><h3>${exercise.muscle_group}</h3>
+<<<<<<< HEAD
           <h2>${exercise.specific_exercise}</h2>
+=======
+          <h4>${exercise.specific_exercise}</h4>
+>>>>>>> 7701de1e730db88f71f1c2dfb5385ca6035f83dd
           </div>`;
           
           exercise.sets.forEach(set => {
