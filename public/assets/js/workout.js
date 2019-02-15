@@ -3,6 +3,91 @@ $(document).ready(function() {
     const $workoutForm = $("#workout-form");
     const $addExercise = $("#add-exercise");
     const $exerciseDiv = $("#exercise-inputs");
+
+    $("#chest").hide();
+    $("#back").hide();
+    $("#shoulder").hide();
+    $("#arm").hide();
+    $("#leg").hide();
+    $("#abdominal").hide();
+
+    document.getElementById("muscle-group").onchange = function() {showExercise()};
+
+  function showExercise() {
+
+    var $muscleGroup = $("#muscle-group").val().trim();
+
+    if ($muscleGroup === "choose-muscle-group") {
+      $("#chest").hide();
+      $("#back").hide();
+      $("#shoulder").hide();
+      $("#arm").hide();
+      $("#leg").hide();
+      $("#abdominal").hide();
+    }
+
+    if ($muscleGroup === "chest") {
+      $("#chest").show();
+      $("#back").hide();
+    $("#shoulder").hide();
+    $("#arm").hide();
+    $("#leg").hide();
+    $("#abdominal").hide();
+
+    }
+    else if ($muscleGroup === "back") {
+      $("#back").show();
+      $("#chest").hide();
+      $("#shoulder").hide();
+    $("#arm").hide();
+    $("#leg").hide();
+    $("#abdominal").hide();
+
+
+    }
+    else if ($muscleGroup === "shoulders") {
+      $("#shoulder").show();
+      $("#chest").hide();
+      $("#back").hide();
+      $("#arm").hide();
+    $("#leg").hide();
+    $("#abdominal").hide();
+
+
+    }
+    else if ($muscleGroup === "arms") {
+      $("#arm").show();
+      $("#chest").hide();
+    $("#back").hide();
+    $("#shoulder").hide();
+    $("#leg").hide();
+    $("#abdominal").hide();
+
+
+    }
+    else if ($muscleGroup === "legs") {
+      $("#leg").show();
+      $("#chest").hide();
+    $("#back").hide();
+    $("#shoulder").hide();
+    $("#arm").hide();
+    $("#abdominal").hide();
+
+    }
+     else if ($muscleGroup === "abdominal") {
+      $("#abdominal").show();
+      $("#chest").hide();
+    $("#back").hide();
+    $("#shoulder").hide();
+    $("#arm").hide();
+    $("#leg").hide();
+
+    }
+    console.log($muscleGroup);
+  }
+
+ 
+
   
     // for performance reasons, immediately make an empty copy of the first exercise form elements so we can use it to create new inputs
     const $exerciseTemplate = $("#main-exercise").clone();
@@ -40,8 +125,9 @@ $(document).ready(function() {
   
       $(".exercise").each(function(i) {
         const exerciseData = {
-          exercise_name: $(this).find(".exercise-name").val().trim(),
-          muscle_group: $(this).find(".muscle-group").val().trim(),
+          exercise_name: $(this).find("#exercise-name").val(),
+          muscle_group: $(this).find("#muscle-group").val().trim(),
+          specific_exercise: $(this).find(".specific-exercise").val().trim(),
           sets: []
         }
   
@@ -84,6 +170,9 @@ $(document).ready(function() {
     $addExercise.on("click", addExercise);
     $(document).on("click", '.add-set', addSet);
     $workoutForm.on("submit", collectData);
+    
+    
+
   
   
   });

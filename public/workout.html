@@ -7,9 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-  <title>Sequelize JSON!</title>
+  <link rel="stylesheet" href="assets/css/workout.css">
+  <title>Workout Form</title>
 </head>
-
 <body>
 
   
@@ -21,19 +21,83 @@
           <div class="form-group">
             <label for="email">Date Of Workout</label>
             <input required type="date" class="form-control" id="date-input">
+            <br>
+            <input type="text" class="form-control" id= "exercise-name" placeholder="Name Your Exercise">
           </div>
           <!-- template for an exercise, we'll use this to clone -->
           <div class="form-group exercise border border-dark p-3 my-4" id="main-exercise">
-            <h4>Exercise <span class="exercise-num">1</span></h4>
-            <select type="text" class="mb-3 form-control muscle-group" placeholder="Muscle Group">
+
+            <select type="text" class="mb-3 form-control muscle-group" id="muscle-group" placeholder="Muscle Group">
+              <option value="choose-muscle-group">Choose Muscle Group</option>
               <option value="chest">Chest</option>
               <option value="back">Back</option>
               <option value="shoulders">Shoulders</option>
               <option value="arms">Arms</option>
               <option value="legs">Legs</option>
-              <option value="abs">Abs</option>
+              <option value="abdominal">Abdominal</option>
             </select>
-            <input type="text" class="form-control exercise-name" placeholder="Exercise Name">
+
+            
+            
+            <select type="text" class="mb-3 form-control specific-exercise" id="chest" placeholder="Chest Exercises">
+                <option value="">Choose Chest Exercise</option>
+                <option value="barbell-bench-press">Barbell Bench Press</option>
+                <option value="flat-bench-dumbbell-press">Flat Bench Dumbbell Press</option>
+                <option value="low-incline-barbell-bench-press">Low-Incline Barbell Bench Press</option>
+                <option value="machine-decline-press">Machine-Decline Press</option>
+                <option value="seated-machine-bench-press">Seated Machine Bench Press</option>
+            </select>
+
+            <select type="text" class="mb-3 form-control specific-exercise" id="back" placeholder="Back Exercises">
+                <option value="">Choose Back Exercise</option>
+                <option value="barbell-deadlift">Barbell Deadlift</option>
+                <option value="bent-over-barbell-deadlift">Bent-Over Barbell Deadlift</option>
+                <option value="standing-t-bar-row">Standing T-Bar Row</option>
+                <option value="wide-grip-pull-up">Wide-Grip Pull-Up</option>
+                <option value="wide-grip-seated-cable-row">Wide-Grip Seated Cable Row</option>
+            </select>
+
+            <select type="text" class="mb-3 form-control specific-exercise" id="shoulder" placeholder="Shoulder Exercises">
+                <option value="">Choose Shoulder Exercise</option>
+                <option value="arnold-press">Arnold Press</option>
+                <option value="barbell-standing-press">Barbell Standing Press</option>
+                <option value="lateral-raise">Lateral Raise</option>
+                <option value="seated-dumbbell-press">Seated Dumbbell Press</option>
+                <option value="upright-row">Upright Row</option>
+            </select>
+
+            <select type="text" class="mb-3 form-control specific-exercise" id="arm" placeholder="Arm Exercises">
+                <option value="">Choose Arm Exercise</option>
+                <option value="chin-up">Chin-Up</option>
+                <option value="close-grip-curl">Close Grip Curl</option>
+                <option value="dip">Dip</option>
+                <option value="hammer-curl">Hammer Curl</option>
+                <option value="nuetral-grip-tricep-extension">Nuetral-Grip Tricep Extension</option>
+            </select>
+
+            <select type="text" class="mb-3 form-control specific-exercise" id="leg" placeholder="Leg Exercises">
+                <option value="">Choose Leg Exercise</option>
+                <option value="deadlift">Deadlift</option>
+                <option value="dumbbell-squat">Dumbbell-Squat</option>
+                <option value="front-squat">Front Squat</option>
+                <option value="high-bar-squat">High-Bar Squat</option>
+                <option value="low-bar-squat">Low-Bar Squat</option>
+                
+            </select>
+
+            <select type="text" class="mb-3 form-control specific-exercise" id="abdominal" placeholder="Abdominal Exercises">
+                <option value="">Choose Abdominal Exercise</option>
+                <option value="ab-wheel-rollout">Ab Wheel Rollout</option>
+                <option value="arms-high-partial-situp">Arms-High Partial Situp</option>
+                <option value="barbell-rollout">Barbell Rollout</option>
+                <option value="barbell-russian-twist">Barbell Russian Twist</option>
+                <option value="dip-leg-raise-combo">Dip-Leg Raise Combo</option>
+            </select>
+            
+            
+
+
+            
             <!-- begin set data -->
             <div class="row mt-3 set-data">
               <div class="input-group mb-3 col">
@@ -55,12 +119,13 @@
           <div id="exercise-inputs"></div>
           <button class="btn btn-success btn-block mb-3" id="add-exercise">Add an exercise</button>
           <div class="form-group">
-            <button type="submit" class="btn btn-block btn-dark">Login</button>
+            <button type="submit" class="btn btn-block btn-dark">Submit</button>
           </div>
         </form>
       </div>
     </div>
   </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
