@@ -41,6 +41,10 @@ img {
   border-radius: 10px;
 }
 
+.card {
+  border-radius: 10px; 
+}
+
 .card-title {
   text-align: center;
   background: #EEEBD1;
@@ -49,6 +53,7 @@ img {
   background: linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
   border-radius: 10px;
 }
+
 
 a:hover {
   background-color: rgb(252, 248, 22);
@@ -59,7 +64,7 @@ a:hover {
 
 .footer {
   background-color:  mediumslateblue;
-  padding: 2%;
+  padding: 1.5%;
   opacity: .95;
   border-radius: 10px;
 }
