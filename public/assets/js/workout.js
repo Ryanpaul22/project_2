@@ -183,11 +183,7 @@ $(document).ready(function() {
   //         let dbWo =
   //           `<div class="container-fluid text-center">
             
-<<<<<<< HEAD
   //         <div><h3>${exercise.muscle_group}</h3>
-=======
-  //         <div><h1>${exercise.muscle_group}</h1>
->>>>>>> 3a43b8e8b4f55adc1c5638162039cd2ac1aad40d
   //         <h4>${exercise.exercise_name}</h4>
   //         </div>`;
           
