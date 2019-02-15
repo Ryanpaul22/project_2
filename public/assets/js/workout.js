@@ -17,80 +17,95 @@ $select1.on('change', function() {
     $("#leg").hide();
     $("#abdominal").hide();
 
-    document.getElementById("muscle-group").onchange = function() {showExercise()};
+  
+
+    $(document).on("change", ".muscle-group", showExercise);
 
   function showExercise() {
 
-    var $muscleGroup = $("#muscle-group").val().trim();
+    var $muscleGroup = $(this).val().trim();
+    
 
     if ($muscleGroup === "choose-muscle-group") {
-      $("#chest").hide();
-      $("#back").hide();
-      $("#shoulder").hide();
-      $("#arm").hide();
-      $("#leg").hide();
-      $("#abdominal").hide();
-    }
-
-    if ($muscleGroup === "chest") {
-      $("#chest").show();
-      $("#back").hide();
-    $("#shoulder").hide();
-    $("#arm").hide();
-    $("#leg").hide();
-    $("#abdominal").hide();
+      $(this).parent(".exercise").find(".shoulder").hide();
+      $(this).parents(".exercise").find(".chest").hide();
+      $(this).parents(".exercise").find(".back").hide();
+      $(this).parents(".exercise").find(".arm").hide();
+      $(this).parents(".exercise").find(".leg").hide();
+      $(this).parents(".exercise").find(".abdominal").hide();
 
     }
-    else if ($muscleGroup === "back") {
-      $("#back").show();
-      $("#chest").hide();
-      $("#shoulder").hide();
-    $("#arm").hide();
-    $("#leg").hide();
-    $("#abdominal").hide();
+
+    if ($muscleGroup === "Chest") {
+
+      $(this).parent(".exercise").find(".shoulder").hide();
+      $(this).parents(".exercise").find(".chest").show();
+      $(this).parents(".exercise").find(".back").hide();
+      $(this).parents(".exercise").find(".arm").hide();
+      $(this).parents(".exercise").find(".leg").hide();
+      $(this).parents(".exercise").find(".abdominal").hide();
 
 
     }
-    else if ($muscleGroup === "shoulders") {
-      $("#shoulder").show();
-      $("#chest").hide();
-      $("#back").hide();
-      $("#arm").hide();
-    $("#leg").hide();
-    $("#abdominal").hide();
+    else if ($muscleGroup === "Back") {
+
+      $(this).parent(".exercise").find(".shoulder").hide();
+      $(this).parents(".exercise").find(".chest").hide();
+      $(this).parents(".exercise").find(".back").show();
+      $(this).parents(".exercise").find(".arm").hide();
+      $(this).parents(".exercise").find(".leg").hide();
+      $(this).parents(".exercise").find(".abdominal").hide();
 
 
     }
-    else if ($muscleGroup === "arms") {
-      $("#arm").show();
-      $("#chest").hide();
-    $("#back").hide();
-    $("#shoulder").hide();
-    $("#leg").hide();
-    $("#abdominal").hide();
+    else if ($muscleGroup === "Shoulders") {
+
+      $(this).parent(".exercise").find(".shoulder").show();
+      $(this).parents(".exercise").find(".chest").hide();
+      $(this).parents(".exercise").find(".back").hide();
+      $(this).parents(".exercise").find(".arm").hide();
+      $(this).parents(".exercise").find(".leg").hide();
+      $(this).parents(".exercise").find(".abdominal").hide();
+
+    }
+    else if ($muscleGroup === "Arms") {
+
+      $(this).parent(".exercise").find(".shoulder").hide();
+      $(this).parents(".exercise").find(".chest").hide();
+      $(this).parents(".exercise").find(".back").hide();
+      $(this).parents(".exercise").find(".arm").show();
+      $(this).parents(".exercise").find(".leg").hide();
+      $(this).parents(".exercise").find(".abdominal").hide();
+
 
 
     }
-    else if ($muscleGroup === "legs") {
-      $("#leg").show();
-      $("#chest").hide();
-    $("#back").hide();
-    $("#shoulder").hide();
-    $("#arm").hide();
-    $("#abdominal").hide();
+    else if ($muscleGroup === "Legs") {
+
+      $(this).parent(".exercise").find(".shoulder").hide();
+      $(this).parents(".exercise").find(".chest").hide();
+      $(this).parents(".exercise").find(".back").hide();
+      $(this).parents(".exercise").find(".arm").hide();
+      $(this).parents(".exercise").find(".leg").show();
+      $(this).parents(".exercise").find(".abdominal").hide();
+
 
     }
-     else if ($muscleGroup === "abdominal") {
-      $("#abdominal").show();
-      $("#chest").hide();
-    $("#back").hide();
-    $("#shoulder").hide();
-    $("#arm").hide();
-    $("#leg").hide();
+     else if ($muscleGroup === "Abdominal") {
+
+      $(this).parent(".exercise").find(".shoulder").hide();
+      $(this).parents(".exercise").find(".chest").hide();
+      $(this).parents(".exercise").find(".back").hide();
+      $(this).parents(".exercise").find(".arm").hide();
+      $(this).parents(".exercise").find(".leg").hide();
+      $(this).parents(".exercise").find(".abdominal").show();
+
 
     }
     console.log($muscleGroup);
+    ;
   }
+
 
  
 
