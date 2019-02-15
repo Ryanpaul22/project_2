@@ -1,48 +1,134 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-  const $workoutForm = $("#workout-form");
-  const $addExercise = $("#add-exercise");
-  const $exerciseDiv = $("#exercise-inputs");
+    const $workoutForm = $("#workout-form");
+    const $addExercise = $("#add-exercise");
+    const $exerciseDiv = $("#exercise-inputs");
 
-  // for performance reasons, immediately make an empty copy of the first exercise form elements so we can use it to create new inputs
-  const $exerciseTemplate = $("#main-exercise").clone();
-  $exerciseTemplate.find("input").val("");
+    $("#chest").hide();
+    $("#back").hide();
+    $("#shoulder").hide();
+    $("#arm").hide();
+    $("#leg").hide();
+    $("#abdominal").hide();
 
-  function addExercise(e) {
-    e.preventDefault();
-    // clone exercise
-    const $newExercise = $exerciseTemplate.clone();
+    document.getElementById("muscle-group").onchange = function() {showExercise()};
 
-    // add it to page
-    $newExercise.appendTo($exerciseDiv);
-    // renumber each exercise to keep track
-    $(".exercise").each(function (i) {
-      console.log(i);
-      $(this).find(".exercise-num").text(i + 1);
-    });
-  }
+  function showExercise() {
 
-  function addSet(e) {
-    e.preventDefault();
-    // clone existing set (it's right above it... or previous)
-    const $newSet = $(this).prev().clone();
-    $newSet.find("input").val("");
-    $(this).prev().after($newSet);
-  }
+    var $muscleGroup = $("#muscle-group").val().trim();
 
-
-  function collectData(e) {
-    e.preventDefault();
-
-    const workoutData = {
-      date: $("#date-input").val().trim(),
-      exercises: []
+    if ($muscleGroup === "choose-muscle-group") {
+      $("#chest").hide();
+      $("#back").hide();
+      $("#shoulder").hide();
+      $("#arm").hide();
+      $("#leg").hide();
+      $("#abdominal").hide();
     }
 
-    $(".exercise").each(function (i) {
+    if ($muscleGroup === "chest") {
+      $("#chest").show();
+      $("#back").hide();
+    $("#shoulder").hide();
+    $("#arm").hide();
+    $("#leg").hide();
+    $("#abdominal").hide();
+
+    }
+    else if ($muscleGroup === "back") {
+      $("#back").show();
+      $("#chest").hide();
+      $("#shoulder").hide();
+    $("#arm").hide();
+    $("#leg").hide();
+    $("#abdominal").hide();
+
+
+    }
+    else if ($muscleGroup === "shoulders") {
+      $("#shoulder").show();
+      $("#chest").hide();
+      $("#back").hide();
+      $("#arm").hide();
+    $("#leg").hide();
+    $("#abdominal").hide();
+
+
+    }
+    else if ($muscleGroup === "arms") {
+      $("#arm").show();
+      $("#chest").hide();
+    $("#back").hide();
+    $("#shoulder").hide();
+    $("#leg").hide();
+    $("#abdominal").hide();
+
+
+    }
+    else if ($muscleGroup === "legs") {
+      $("#leg").show();
+      $("#chest").hide();
+    $("#back").hide();
+    $("#shoulder").hide();
+    $("#arm").hide();
+    $("#abdominal").hide();
+
+    }
+     else if ($muscleGroup === "abdominal") {
+      $("#abdominal").show();
+      $("#chest").hide();
+    $("#back").hide();
+    $("#shoulder").hide();
+    $("#arm").hide();
+    $("#leg").hide();
+
+    }
+    console.log($muscleGroup);
+  }
+
+ 
+
+  
+    // for performance reasons, immediately make an empty copy of the first exercise form elements so we can use it to create new inputs
+    const $exerciseTemplate = $("#main-exercise").clone();
+    $exerciseTemplate.find("input").val("");
+  
+    function addExercise(e) {
+      e.preventDefault();
+      // clone exercise
+      const $newExercise = $exerciseTemplate.clone();
+  
+      // add it to page
+      $newExercise.appendTo($exerciseDiv);
+      // renumber each exercise to keep track
+      $(".exercise").each(function(i) {
+        console.log(i);
+        $(this).find(".exercise-num").text(i + 1);
+      });
+    }
+    function addSet(e) {
+      e.preventDefault();
+      // clone existing set (it's right above it... or previous)
+      const $newSet = $(this).prev().clone();
+      $newSet.find("input").val("");
+      $(this).prev().after($newSet);
+    }
+
+    function collectData(e) {
+      e.preventDefault();
+
+      const workoutData = {
+        date: $("date-input").val(),
+        exercises: []
+      }
+    
+
+  
+    $(".exercise").each(function(i) {
       const exerciseData = {
-        exercise_name: $(this).find(".exercise-name").val().trim(),
-        muscle_group: $(this).find(".muscle-group").val().trim(),
+        exercise_name: $(this).find("#exercise-name").val(),
+        muscle_group: $(this).find("#muscle-group").val().trim(),
+        specific_exercise: $(this).find(".specific-exercise").val().trim(),
         sets: []
       }
 
@@ -54,6 +140,7 @@ $(document).ready(function () {
         // make sure both exist or just ignore it
         if (setData.reps && setData.weight) {
           exerciseData.sets.push(setData);
+
         }
       });
 
@@ -67,6 +154,7 @@ $(document).ready(function () {
     // send it to the database
     sendWorkoutInfo(workoutData);
   }
+  
 
   function sendWorkoutInfo(workoutData) {
 
@@ -95,7 +183,11 @@ $(document).ready(function () {
   //         let dbWo =
   //           `<div class="container-fluid text-center">
             
+<<<<<<< HEAD
   //         <div><h3>${exercise.muscle_group}</h3>
+=======
+  //         <div><h1>${exercise.muscle_group}</h1>
+>>>>>>> 3a43b8e8b4f55adc1c5638162039cd2ac1aad40d
   //         <h4>${exercise.exercise_name}</h4>
   //         </div>`;
           
