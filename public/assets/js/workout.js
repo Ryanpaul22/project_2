@@ -1,4 +1,10 @@
-$(document).ready(function() {
+var $select1 = $( '#select1' ),
+		$select2 = $( '#select2' ),
+    $options = $select2.find( 'option' );
+    
+$select1.on('change', function() {
+	$select2.html( $options.filter( '[value="' + this.value + '"]' ) );
+} ).trigger('change');
 
     const $workoutForm = $("#workout-form");
     const $addExercise = $("#add-exercise");
@@ -182,39 +188,10 @@ $(document).ready(function() {
     });
   }
 
-  // function printWorkout() {
-
-  //   $.ajax({
-  //     url: "api/workouts",
-  //     method: "GET"
-  //   }).then(function (results) {
-
-  //     for (let i = 0; i < results.length; i++) {
-
-  //       let dbData = results[i];
-  //       console.log(dbData);
-  //       dbData.exercises.forEach(exercise => {
-  //         console.log(exercise);
-  //         let dbWo =
-  //           `<div class="container-fluid text-center">
-            
-  //         <div><h3>${exercise.muscle_group}</h3>
-  //         <h4>${exercise.exercise_name}</h4>
-  //         </div>`;
-          
-  //         exercise.sets.forEach(set => {
-  //           dbWo += `${set.reps} reps x ${set.weight} lbs<br></div>`
-  //         });
-  //         $("#workoutDiv").append(dbWo);
-  //       })
-  //     }
-  //   })
-  // }
-
+  
   $addExercise.on("click", addExercise);
   $(document).on("click", '.add-set', addSet);
   $workoutForm.on("submit", collectData);
 
-  // printWorkout();
 
-});
+//})

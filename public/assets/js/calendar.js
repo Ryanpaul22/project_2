@@ -13,7 +13,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton',  function(Y) {
       date: new Date()}).render();
 
     // Get a reference to Y.DataType.Date
-    var dtdate = Y.DataType.Date;
+    var dt = Y.DataType.Date;
 
     // Listen to calendar's selectionChange event.
     calendar.on("selectionChange", function (ev) {
@@ -24,10 +24,31 @@ YUI().use('calendar', 'datatype-date', 'cssbutton',  function(Y) {
       // we expect there to be only one date)
       var newDate = ev.newSelection[0];
 
+      var formatDate = new Date(newDate);
+
+      var year = formatDate.getFullYear(newDate);
+      var month = formatDate.getMonth(newDate) + 1;
+      var day = formatDate.getDate(newDate);
+
+      if (month < 10) {
+        var month = "0" + month
+      }
+
+      if (day < 10) {
+        var day = "0" + day
+      }
+
+      var theDate = year + "-" + month + "-" + day;
+      console.log(theDate);
       // Format the date and output it to a DOM
       // element.
-      Y.one("#selecteddate").setHTML(dtdate.format(newDate));
+      Y.one("#selecteddate").setHTML(theDate);
+
+      //Y.one("#selecteddate").setHTML(dt.format(formatDate));
+      
+      
     });
+    
 
 
     // When the 'Show Previous Month' link is clicked,
