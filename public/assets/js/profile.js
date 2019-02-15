@@ -1,7 +1,4 @@
 $(document).ready(function() {
-
-
-
   function printWorkout() {
     $.ajax({
       url: "api/workouts",
@@ -10,17 +7,16 @@ $(document).ready(function() {
       for (let i = results.length - 1; i < results.length; i++) {
         let dbData = results[i];
         console.log(dbData);
-        const date = (dbData.date);
+        const date = (dbData.updatedAt[0] + dbData.updatedAt[1] + dbData.updatedAt[2] + dbData.updatedAt[3] + dbData.updatedAt[4] + dbData.updatedAt[5] + dbData.updatedAt[6] + dbData.updatedAt[7] + dbData.updatedAt[8] + dbData.updatedAt[9]);
         console.log(date);
         $(".dateDiv").append(date);
-
         dbData.exercises.forEach(exercise => {
           console.log(exercise);
           let dbWo =
             `<div class="container-fluid text-center">
             <br>
           <div><h3>${exercise.muscle_group}</h3>
-          <h4>${exercise.exercise_name}</h4>
+          <h2>${exercise.specific_exercise}</h2>
           </div>`;
           
           exercise.sets.forEach(set => {
@@ -31,7 +27,5 @@ $(document).ready(function() {
       }
     })
   }
-
   printWorkout();
-
 })
