@@ -34,15 +34,26 @@
           <!-- template for an exercise, we'll use this to clone -->
           <div class="form-group exercise border border-dark p-3 my-4" id="main-exercise">
             <h4>Exercise <span class="exercise-num">1</span></h4>
-            <select type="text" class="mb-3 form-control muscle-group" placeholder="Muscle Group">
-              <option value="chest">Chest</option>
-              <option value="back">Back</option>
-              <option value="shoulders">Shoulders</option>
-              <option value="arms">Arms</option>
-              <option value="legs">Legs</option>
-              <option value="abs">Abs</option>
+            <select class="mb-3 form-control muscle-group" name="select1" id="select1">
+              <option selected disabled>Choose a muscle group</option>
+              <option value="1">Chest</option>
+              <option value="2">Back</option>
+              <option value="3">Shoulders</option>
+              <option value="4">Arms</option>
+              <option value="5">Legs</option>
+              <option value="6">Abs</option>
             </select>
-            <input type="text" class="form-control exercise-name" placeholder="Exercise Name">
+            <select class="mb-3 form-control muscle-group" name="select2" id="select2">
+              <option value="1">Bench Press</option>
+              <option value="1">Chest</option>
+              <option value="1">Chest</option>
+              <option value="2">Wolf</option>
+              <option value="2">Fox</option>
+              <option value="2">Bear</option>
+              <option value="3">Eagle</option>
+              <option value="3">Hawk</option>
+              <option value="4">BWM<option>
+          </select>
             <!-- begin set data -->
             <div class="row mt-3 set-data">
               <div class="input-group mb-3 col">
@@ -70,6 +81,7 @@
       </div>
     </div>
   </div>
+  <div id="workoutDiv"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
