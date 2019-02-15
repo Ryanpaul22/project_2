@@ -79,39 +79,39 @@ $(document).ready(function () {
     });
   }
 
-  function printWorkout() {
+  // function printWorkout() {
 
-    $.ajax({
-      url: "api/workouts",
-      method: "GET"
-    }).then(function (results) {
+  //   $.ajax({
+  //     url: "api/workouts",
+  //     method: "GET"
+  //   }).then(function (results) {
 
-      for (let i = 0; i < results.length; i++) {
+  //     for (let i = 0; i < results.length; i++) {
 
-        let dbData = results[i];
-        console.log(dbData);
-        dbData.exercises.forEach(exercise => {
-          console.log(exercise);
-          let dbWo =
-            `<div class="container-fluid text-center">
+  //       let dbData = results[i];
+  //       console.log(dbData);
+  //       dbData.exercises.forEach(exercise => {
+  //         console.log(exercise);
+  //         let dbWo =
+  //           `<div class="container-fluid text-center">
             
-          <div><h1>${exercise.muscle_group}</h1>
-          <h4>${exercise.exercise_name}</h4>
-          </div>`;
+  //         <div><h3>${exercise.muscle_group}</h3>
+  //         <h4>${exercise.exercise_name}</h4>
+  //         </div>`;
           
-          exercise.sets.forEach(set => {
-            dbWo += `${set.reps} reps x ${set.weight} lbs<br></div>`
-          });
-          $("#workoutDiv").append(dbWo);
-        })
-      }
-    })
-  }
+  //         exercise.sets.forEach(set => {
+  //           dbWo += `${set.reps} reps x ${set.weight} lbs<br></div>`
+  //         });
+  //         $("#workoutDiv").append(dbWo);
+  //       })
+  //     }
+  //   })
+  // }
 
   $addExercise.on("click", addExercise);
   $(document).on("click", '.add-set', addSet);
   $workoutForm.on("submit", collectData);
 
-  printWorkout();
+  // printWorkout();
 
 });
