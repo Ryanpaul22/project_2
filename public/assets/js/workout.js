@@ -146,12 +146,6 @@ $select1.on('change', function() {
         // make sure both exist or just ignore it
         if (setData.reps && setData.weight) {
           exerciseData.sets.push(setData);
-<<<<<<< HEAD
-        }
-      });
-      workoutData.exercises.push(exerciseData);
-    });
-=======
 
         }
       });
@@ -162,19 +156,14 @@ $select1.on('change', function() {
 
     });
 
->>>>>>> a6c2b8ae9003003c96072af52f5f54978c0d905f
     console.log(workoutData);
     // send it to the database
     sendWorkoutInfo(workoutData);
   }
-<<<<<<< HEAD
-  function sendWorkoutInfo(workoutData) {
-=======
   
 
   function sendWorkoutInfo(workoutData) {
 
->>>>>>> a6c2b8ae9003003c96072af52f5f54978c0d905f
     $.ajax({
       url: "/api/workouts",
       method: "POST",
@@ -183,75 +172,11 @@ $select1.on('change', function() {
       console.log(data);
     });
   }
-<<<<<<< HEAD
-  function printWorkout() {
-    $.ajax({
-      url: "api/workouts",
-      method: "GET"
-    }).then(function (results) {
-      for (let i = results.length - 1; i < results.length; i++) {
-        let dbData = results[i];
-        console.log(dbData);
-        dbData.exercises.forEach(exercise => {
-          console.log(exercise);
-          let dbWo =
-            `<div class="container text-center">
-              <div>
-                <p>${exercise.muscle_group}</p>
-                <p>${exercise.exercise_name}</p>
-              </div>`;
-              exercise.sets.forEach(set => {
-            dbWo += `
-            <p>${set.reps}</p>
-            <p>${set.weight}</p>
-            `
-          });
-          $("#workoutDiv").append(dbWo);
-        })
-      }
-    })
-  }
-  $addExercise.on("click", addExercise);
-  $(document).on("click", '.add-set', addSet);
-  $workoutForm.on("submit", collectData);
-  printWorkout();
-});
-=======
 
-  // function printWorkout() {
-
-  //   $.ajax({
-  //     url: "api/workouts",
-  //     method: "GET"
-  //   }).then(function (results) {
-
-  //     for (let i = 0; i < results.length; i++) {
-
-  //       let dbData = results[i];
-  //       console.log(dbData);
-  //       dbData.exercises.forEach(exercise => {
-  //         console.log(exercise);
-  //         let dbWo =
-  //           `<div class="container-fluid text-center">
-            
-  //         <div><h3>${exercise.muscle_group}</h3>
-  //         <h4>${exercise.exercise_name}</h4>
-  //         </div>`;
-          
-  //         exercise.sets.forEach(set => {
-  //           dbWo += `${set.reps} reps x ${set.weight} lbs<br></div>`
-  //         });
-  //         $("#workoutDiv").append(dbWo);
-  //       })
-  //     }
-  //   })
-  // }
-
+  
   $addExercise.on("click", addExercise);
   $(document).on("click", '.add-set', addSet);
   $workoutForm.on("submit", collectData);
 
-  // printWorkout();
 
-});
->>>>>>> a6c2b8ae9003003c96072af52f5f54978c0d905f
+//})

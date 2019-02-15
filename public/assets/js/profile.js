@@ -8,23 +8,24 @@ $(document).ready(function() {
       method: "GET"
     }).then(function (results) {
       for (let i = results.length - 1; i < results.length; i++) {
+        console.log(results);
         let dbData = results[i];
-        console.log(dbData);
+        //console.log(dbData);
         const date = (dbData.date);
-        console.log(date);
-        $(".dateDiv").append(date);
+        //console.log(date);
+        $(".center-div").append(date);
 
         dbData.exercises.forEach(exercise => {
-          console.log(exercise);
+          // console.log(exercise);
           let dbWo =
-            `<div class="container-fluid text-center">
-            <br>
-          <div><h3>${exercise.muscle_group}</h3>
-          <h4>${exercise.exercise_name}</h4>
+          `<div class="container-fluid text-center">
+          <div>
+            <h5>${exercise.muscle_group}</h5>
+            <h5>${exercise.exercise_name}</h5>
           </div>`;
           
           exercise.sets.forEach(set => {
-            dbWo += `${set.reps} reps x ${set.weight} lbs<br></div>`
+            dbWo += `${set.reps} reps x ${set.weight} lbs</div><br>`
           });
           $(".center-div").append(dbWo);
         })
