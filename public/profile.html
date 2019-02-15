@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-  <link rel="stylesheet" href="./assets/css/profile.css">
-  <link href="https://fonts.googleapis.com/css?family=Fahkwang|Righteous" rel="stylesheet">
-  <title>Your Profile</title>
-</head>
-
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="./assets/css/profile.css">
+    <link href="https://fonts.googleapis.com/css?family=Fahkwang|Righteous" rel="stylesheet">
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    
+    <title>Your Profile</title>
+  </head>
+  
 <body>
   <nav class="navbar fixed-top mx-auto">
     <div class="nav mx-auto">
       <span style="font-size: 3rem;">
         <div class="nav-item">
-          <a class="nav-link fa fa-calendar" style="color: Mediumslateblue;" href="/calendar"></a>
+          <a class="nav-link fa fa-calendar topIcons" style="color: Mediumslateblue;" href="/calendar"></a>
+        </div>
+    </div>
+    <div class="nav mx-auto">
+      <span style="font-size: 3rem;">
+          <div class="nav-item">
+          <a class="nav-link fa fa-user-friends topIcons" style="color: Mediumslateblue;" href="/user-data-base"></a>
         </div>
     </div>
     <div class="nav mx-auto">
       <span style="font-size: 3rem;">
         <div class="nav-item">
-          <a class="nav-link fa fa-user-friends" style="color: Mediumslateblue;" href="/user-data-base"></a>
+          <a class="nav-link fas fa-sign-in-alt topIcons" style="color: Mediumslateblue;" href="/login"></a>
         </div>
-    </div>
-    <div class="nav mx-auto">
-      <span style="font-size: 3rem;">
-        <div class="nav-item">
-          <a class="nav-link fas fa-sign-in-alt" style="color: Mediumslateblue;" href="/login"></a>
-        </div>
-    </div>
-  </nav>
-  <br>
+      </div>
+    </nav>
+    <br>
   <br>
   <br>
   <br>
   <div class="jumbotron text-center shadow-lg" id="jumbo">
-    <h1 class="display-4" style="font-family: 'Righteous', cursive;" style="color: Mediumslateblue;">Lifting Buddies</h1>
+    <h1 class="display-4 animated pulse infinite slower" style="font-family: 'Righteous', cursive;" style="color: Mediumslateblue;"><a id="LB">Lifting Buddies</a></h1>
     <div>
       <blockquote class="blockquote">
         <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <footer class="blockquote-footer">Someone famous in
-          <cite title="Source Title">Source Title</cite>
+        <footer class="blockquote-footer">Some neckbeardy hipster bro in
+          <cite title="Source Title">Coding Camp</cite>
         </footer>
       </blockquote>
     </div>
@@ -64,7 +67,7 @@
             </div>
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
               content. This card has even longer content than the first to show that equal height action.</p>
-          </div>
+            </div>
         </div>
         <div class="card-footer"></div>
       </div>
@@ -74,58 +77,16 @@
           <br>
           <div class="nav-item text-center">
             <span style="font-size: 3rem;">
-              <a class="nav-link fa fas fa-plus" style="color: Mediumslateblue;" href="/workout-form"></a>
-          </div>
+                <a class="nav-link fa fas fa-plus topIcons" style="color: Mediumslateblue;" href="/workout-form"></a>
+              </div>
           <br>
-          <div class="center-div">
+          
+          
 
-          </div>
-          <table class="table table-reflow">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Table heading</th>
-                <th>Table heading</th>
-                <th>Table heading</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              <tr>
-                <th scope="row">4</th>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-            </tbody>
-          </table>
+          <h2 class="text-center dateDiv"></h2>
+          <div class="text-center center-div"></div>
+
+
         </div>
         <div class="card-footer"></div>
       </div>
@@ -153,31 +114,35 @@
       <div class="container">
         <nav class="navbar mx-auto">
           <div class="nav mx-auto">
-            <span style="font-size: 3rem;">
-              <div class="nav-item">
+            <span style="font-size: 2rem;">
+                <div class="nav-item">
                 <a class="nav-link fab fa-instagram socIcon" style="color: whitesmoke;" href="https://www.instagram.com"></a>
               </div>
-          </div>
+            </div>
           <div class="nav mx-auto">
-            <span style="font-size: 3rem;">
-              <div class="nav-item">
-                <a class="nav-link fab fa-facebook socIcon" style="color: whitesmoke;" href="https://www.facebook.com"></a>
+            <span style="font-size: 2rem;">
+                <div class="nav-item">
+                  <a class="nav-link fab fa-facebook socIcon" style="color: whitesmoke;" href="https://www.facebook.com"></a>
               </div>
-          </div>
-          <div class="nav mx-auto">
-            <span style="font-size: 3rem;">
-              <div class="nav-item">
+            </div>
+            <div class="nav mx-auto">
+            <span style="font-size: 2rem;">
+                <div class="nav-item">
                 <a class="nav-link fab fa-twitter-square socIcon" style="color: whitesmoke;" href="https://www.twitter.com"></a>
               </div>
-          </div>
+            </div>
       </div>
     </div>
   </footer>
-
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<<<<<<< HEAD
   <script src="/assets/js/profile.js"></script>
+=======
+  <script src="assets/js/profile.js"></script>
+>>>>>>> a6c2b8ae9003003c96072af52f5f54978c0d905f
 
 </body>
 
