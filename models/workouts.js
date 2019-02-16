@@ -10,6 +10,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.TEXT,
       defaultValue: DataTypes.TEXT,
       required: true
+
     },
       
 

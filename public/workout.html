@@ -50,10 +50,17 @@
             <label for="email">Date Of Workout</label>
             <input required type="date" class="form-control" id="date-input">
             <br>
+
             <input type="text" class="form-control" id="exercise-name" placeholder="Name Your Workout">
+
           </div>
+
+          
+          <input type="text" class="form-control exercise-name" id= "exercise-name" placeholder="Name Your Exercise">
           <!-- template for an exercise, we'll use this to clone -->
+
           <div class="form-group exercise shadow-lg p-3 my-4" id="main-exercise">
+
             <select type="text" class="mb-3 form-control muscle-group" id="muscle-group" placeholder="Muscle Group">
               <option value="choose-muscle-group">Choose Muscle Group</option>
               <option value="Chest">Chest</option>
@@ -63,6 +70,7 @@
               <option value="Legs">Legs</option>
               <option value="Abdominal">Abdominal</option>
             </select>
+
 
             <select type="text" class="mb-3 form-control specific-exercise chest" id="chest" placeholder="Chest Exercises">
               <option value="">Choose Chest Exercise</option>
@@ -113,6 +121,7 @@
               <option value="Dip-Leg Raise Combo">Dip-Leg Raise Combo</option>
             </select>
 
+
             <!-- begin set data -->
             <div class="row mt-3 set-data">
               <div class="input-group mb-3 col">
@@ -122,16 +131,21 @@
                 </div>
               </div>
               <div class="input-group mb-3 col">
+
                 <input type="number" class="form-control weight" placeholder="How many lbs?" aria-describedby="basic-addon2">
+
                 <div class="input-group-append">
                   <span class="input-group-text" id="basic-addon2">lbs</span>
                 </div>
               </div>
             </div>
+          
             <!-- end set data -->
+
             <button class="btn btn-block btn-secondary add-set">Add Set</button>
+
           </div>
-          <div id="exercise-inputs"></div>
+          
           <button class="btn btn-success btn-block mb-3" id="add-exercise">Add an exercise</button>
           <div class="form-group  center-text">
             <br>
@@ -142,6 +156,7 @@
       </div>
     </div>
   </div>
+
   <footer class="footer shadow-lg">
       <div class="container-fluid">
         <div class="container-fluid">
@@ -167,6 +182,7 @@
         </div>
       </div>
     </footer>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>

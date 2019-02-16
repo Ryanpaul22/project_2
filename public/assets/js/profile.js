@@ -6,6 +6,7 @@ $(document).ready(function () {
     }).then(function (results) {
       for (let i = results.length - 1; i < results.length; i++) {
 
+
         let dbData = results[i];
         //console.log(dbData);
         const date = dbData.updatedAt.split("T").shift();
@@ -16,17 +17,22 @@ $(document).ready(function () {
         $(".dateDiv").append(date);
 
 
+
         dbData.exercises.forEach(exercise => {
           // console.log(exercise);
           let dbWo =
+
             `<div class="container-fluid text-center">
             <br>
           <div>
           <h5>${exercise.specific_exercise}</h5>
           </div>`;
 
+
           exercise.sets.forEach(set => {
-            dbWo += `${set.reps} reps x ${set.weight} lbs<br></div>`
+
+            
+            dbWo += `<pre>${set.reps} reps x ${set.weight} lbs</pre>`
           });
           $(".center-div").append(dbWo);
         })
