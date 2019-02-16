@@ -115,6 +115,7 @@ function showExercise() {
     }
     $(this).find(".set-data").each(function (i) {
       const setData = {
+        
         reps: $(this).find(".reps").val().trim(),
         weight: $(this).find(".weight").val().trim()
       }

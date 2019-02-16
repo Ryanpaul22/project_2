@@ -9,6 +9,7 @@ $(document).ready(function() {
         console.log(dbData);
         const date = dbData.updatedAt.split("T").shift();
         console.log(date);
+        // let nameWO = dbData.
         $(".dateDiv").append(date);
         dbData.exercises.forEach(exercise => {
           console.log(exercise);
