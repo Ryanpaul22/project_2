@@ -6,6 +6,14 @@ module.exports = function (sequelize, DataTypes) {
       defaultValue: DataTypes.DATE,
       required: true
     },
+    name: {
+      type: DataTypes.TEXT,
+      defaultValue: DataTypes.TEXT,
+      required: true
+
+    },
+      
+
     exercises: {
       type: DataTypes.TEXT,
       get() {

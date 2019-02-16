@@ -91,6 +91,16 @@ img {
   transition: border-width 0.6s linear;
 }
 
+.specific-exercise-margin {
+  margin: 0;
+  padding: 0;
+}
+
+pre {
+  margin: 0;
+  padding: 0;
+}
+
 
 /* font-family: 'Righteous', cursive; */
 /* font-family: 'Fahkwang', sans-serif; */
