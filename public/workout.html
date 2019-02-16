@@ -46,10 +46,16 @@
             <label for="email">Date Of Workout</label>
             <input required type="date" class="form-control" id="date-input">
             <br>
-            <input type="text" class="form-control" id= "exercise-name" placeholder="Name Your Exercise">
+            
           </div>
+
+          
+          <input type="text" class="form-control exercise-name" id= "exercise-name" placeholder="Name Your Exercise">
           <!-- template for an exercise, we'll use this to clone -->
+          
           <div class="form-group exercise border border-dark p-3 my-4" id="main-exercise">
+              
+            
 
             <select type="text" class="mb-3 form-control muscle-group" id="muscle-group" placeholder="Muscle Group">
               <option value="choose-muscle-group">Choose Muscle Group</option>
@@ -62,8 +68,8 @@
             </select>
 
             
-            
-            <select type="text" class="mb-3 form-control specific-exercise chest" id="chest"  placeholder="Chest Exercises">
+            <div class="specific-exercise">
+            <select type="text" class="mb-3 form-control" id="chest"  placeholder="Chest Exercises">
                 <option value="">Choose Chest Exercise</option>
                 <option value="Barbell Bench Press">Barbell Bench Press</option>
                 <option value="Flat Bench Dumbbell Press">Flat Bench Dumbbell Press</option>
@@ -72,7 +78,7 @@
                 <option value="Seated Machine Bench Press">Seated Machine Bench Press</option>
             </select>
 
-            <select type="text" class="mb-3 form-control specific-exercise back" id ="back" placeholder="Back Exercises">
+            <select type="text" class="mb-3 form-control" id ="back" placeholder="Back Exercises">
                 <option value="">Choose Back Exercise</option>
                 <option value="Barbell Deadlift">Barbell Deadlift</option>
                 <option value="Bent-Over Barbell Deadlift">Bent-Over Barbell Deadlift</option>
@@ -81,7 +87,7 @@
                 <option value="Wide-Grip Seated Cable Row">Wide-Grip Seated Cable Row</option>
             </select>
 
-            <select type="text" class="mb-3 form-control specific-exercise shoulder" id="shoulder" placeholder="Shoulder Exercises">
+            <select type="text" class="mb-3 form-control " id="shoulder" placeholder="Shoulder Exercises">
                 <option value="">Choose Shoulder Exercise</option>
                 <option value="Arnold Press">Arnold Press</option>
                 <option value="Barbell Standing Press">Barbell Standing Press</option>
@@ -90,7 +96,7 @@
                 <option value="Upright Row">Upright Row</option>
             </select>
 
-            <select type="text" class="mb-3 form-control specific-exercise arm" id="arm" placeholder="Arm Exercises">
+            <select type="text" class="mb-3 form-control " id="arm" placeholder="Arm Exercises">
                 <option value="">Choose Arm Exercise</option>
                 <option value="Chin-Up">Chin-Up</option>
                 <option value="Close Grip Curl">Close Grip Curl</option>
@@ -99,7 +105,7 @@
                 <option value="Nuetral-Grip Tricep Extension">Nuetral-Grip Tricep Extension</option>
             </select>
 
-            <select type="text" class="mb-3 form-control specific-exercise leg" id="leg" placeholder="Leg Exercises">
+            <select type="text" class="mb-3 form-control " id="leg" placeholder="Leg Exercises">
                 <option value="">Choose Leg Exercise</option>
                 <option value="Deadlift">Deadlift</option>
                 <option value="Dumbbell-Squat">Dumbbell-Squat</option>
@@ -109,7 +115,7 @@
                 
             </select>
 
-            <select type="text" class="mb-3 form-control specific-exercise abdominal" id="abdominal" placeholder="Abdominal Exercises">
+            <select type="text" class="mb-3 form-control " id="abdominal" placeholder="Abdominal Exercises">
                 <option value="">Choose Abdominal Exercise</option>
                 <option value="Ab Wheel Rollout">Ab Wheel Rollout</option>
                 <option value="Arms-High Partial Situp">Arms-High Partial Situp</option>
@@ -119,7 +125,7 @@
             </select>
             
             
-            
+          </div>
 
 
             
@@ -138,10 +144,13 @@
                 </div>
               </div>
             </div>
+          
             <!-- end set data -->
             <button class="btn btn-block btn-info add-set">Add Set</button>
+            <br>
+            
           </div>
-          <div id="exercise-inputs"></div>
+          
           <button class="btn btn-success btn-block mb-3" id="add-exercise">Add an exercise</button>
           <div class="form-group">
             <button type="submit" class="btn btn-block btn-dark">Submit</button>

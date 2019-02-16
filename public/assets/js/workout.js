@@ -1,14 +1,6 @@
-var $select1 = $( '#select1' ),
-		$select2 = $( '#select2' ),
-    $options = $select2.find( 'option' );
-    
-$select1.on('change', function() {
-	$select2.html( $options.filter( '[value="' + this.value + '"]' ) );
-} ).trigger('change');
-
     const $workoutForm = $("#workout-form");
     const $addExercise = $("#add-exercise");
-    const $exerciseDiv = $("#exercise-inputs");
+    const $exerciseDiv = $(".exercise");
 
     $("#chest").hide();
     $("#back").hide();
@@ -27,79 +19,77 @@ $select1.on('change', function() {
     
 
     if ($muscleGroup === "choose-muscle-group") {
-      $(this).parent(".exercise").find(".shoulder").hide();
-      $(this).parents(".exercise").find(".chest").hide();
-      $(this).parents(".exercise").find(".back").hide();
-      $(this).parents(".exercise").find(".arm").hide();
-      $(this).parents(".exercise").find(".leg").hide();
-      $(this).parents(".exercise").find(".abdominal").hide();
+      $(this).parent(".exercise").find("#shoulder").hide();
+      $(this).parents(".exercise").find("#chest").hide();
+      $(this).parents(".exercise").find("#back").hide();
+      $(this).parents(".exercise").find("#arm").hide();
+      $(this).parents(".exercise").find("#leg").hide();
+      $(this).parents(".exercise").find("#abdominal").hide();
 
     }
 
     if ($muscleGroup === "Chest") {
 
-      $(this).parent(".exercise").find(".shoulder").hide();
-      $(this).parents(".exercise").find(".chest").show();
-      $(this).parents(".exercise").find(".back").hide();
-      $(this).parents(".exercise").find(".arm").hide();
-      $(this).parents(".exercise").find(".leg").hide();
-      $(this).parents(".exercise").find(".abdominal").hide();
+      $(this).parent(".exercise").find("#shoulder").hide();
+      $(this).parents(".exercise").find("#chest").show();
+      $(this).parents(".exercise").find("#back").hide();
+      $(this).parents(".exercise").find("#arm").hide();
+      $(this).parents(".exercise").find("#leg").hide();
+      $(this).parents(".exercise").find("#abdominal").hide();
 
 
     }
     else if ($muscleGroup === "Back") {
 
-      $(this).parent(".exercise").find(".shoulder").hide();
-      $(this).parents(".exercise").find(".chest").hide();
-      $(this).parents(".exercise").find(".back").show();
-      $(this).parents(".exercise").find(".arm").hide();
-      $(this).parents(".exercise").find(".leg").hide();
-      $(this).parents(".exercise").find(".abdominal").hide();
+      $(this).parent(".exercise").find("#shoulder").hide();
+      $(this).parents(".exercise").find("#chest").hide();
+      $(this).parents(".exercise").find("#back").show();
+      $(this).parents(".exercise").find("#arm").hide();
+      $(this).parents(".exercise").find("#leg").hide();
+      $(this).parents(".exercise").find("#abdominal").hide();
 
 
     }
     else if ($muscleGroup === "Shoulders") {
 
-      $(this).parent(".exercise").find(".shoulder").show();
-      $(this).parents(".exercise").find(".chest").hide();
-      $(this).parents(".exercise").find(".back").hide();
-      $(this).parents(".exercise").find(".arm").hide();
-      $(this).parents(".exercise").find(".leg").hide();
-      $(this).parents(".exercise").find(".abdominal").hide();
+      $(this).parent(".exercise").find("#shoulder").show();
+      $(this).parents(".exercise").find("#chest").hide();
+      $(this).parents(".exercise").find("#back").hide();
+      $(this).parents(".exercise").find("#arm").hide();
+      $(this).parents(".exercise").find("#leg").hide();
+      $(this).parents(".exercise").find("#abdominal").hide();
 
     }
     else if ($muscleGroup === "Arms") {
 
-      $(this).parent(".exercise").find(".shoulder").hide();
-      $(this).parents(".exercise").find(".chest").hide();
-      $(this).parents(".exercise").find(".back").hide();
-      $(this).parents(".exercise").find(".arm").show();
-      $(this).parents(".exercise").find(".leg").hide();
-      $(this).parents(".exercise").find(".abdominal").hide();
+      $(this).parent(".exercise").find("#shoulder").hide();
+      $(this).parents(".exercise").find("#chest").hide();
+      $(this).parents(".exercise").find("#back").hide();
+      $(this).parents(".exercise").find("#arm").show();
+      $(this).parents(".exercise").find("#leg").hide();
+      $(this).parents(".exercise").find("#abdominal").hide();
 
 
 
     }
     else if ($muscleGroup === "Legs") {
 
-      $(this).parent(".exercise").find(".shoulder").hide();
-      $(this).parents(".exercise").find(".chest").hide();
-      $(this).parents(".exercise").find(".back").hide();
-      $(this).parents(".exercise").find(".arm").hide();
-      $(this).parents(".exercise").find(".leg").show();
-      $(this).parents(".exercise").find(".abdominal").hide();
-
+      $(this).parent(".exercise").find("#shoulder").hide();
+      $(this).parents(".exercise").find("#chest").hide();
+      $(this).parents(".exercise").find("#back").hide();
+      $(this).parents(".exercise").find("#arm").hide();
+      $(this).parents(".exercise").find("#leg").show();
+      $(this).parents(".exercise").find("#abdominal").hide();
 
     }
      else if ($muscleGroup === "Abdominal") {
 
-      $(this).parent(".exercise").find(".shoulder").hide();
-      $(this).parents(".exercise").find(".chest").hide();
-      $(this).parents(".exercise").find(".back").hide();
-      $(this).parents(".exercise").find(".arm").hide();
-      $(this).parents(".exercise").find(".leg").hide();
-      $(this).parents(".exercise").find(".abdominal").show();
-
+      $(this).parent(".exercise").find("#shoulder").hide();
+      $(this).parents(".exercise").find("#chest").hide();
+      $(this).parents(".exercise").find("#back").hide();
+      $(this).parents(".exercise").find("#arm").hide();
+      $(this).parents(".exercise").find("#leg").hide();
+      $(this).parents(".exercise").find("#abdominal").show();
 
     }
     console.log($muscleGroup);
@@ -139,15 +129,18 @@ $select1.on('change', function() {
       e.preventDefault();
 
       const workoutData = {
-        date: $("date-input").val(),
+        date: $("#date-input").val(),
+        name:  $(this).find("#exercise-name").val().trim(),
         exercises: []
       }
+
     
+      
 
   
-    $(".exercise").each(function(i) {
+    $(this).find(".exercise").each(function(i) {
       const exerciseData = {
-        exercise_name: $(this).find("#exercise-name").val(),
+        // exercise_name: $(this).find("#exercise-name").val().trim(),
         muscle_group: $(this).find("#muscle-group").val().trim(),
         specific_exercise: $(this).find(".specific-exercise").val().trim(),
         sets: []

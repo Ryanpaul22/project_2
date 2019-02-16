@@ -13,19 +13,29 @@ $(document).ready(function() {
         //console.log(dbData);
         const date = (dbData.date);
         //console.log(date);
-        $(".center-div").append(date);
+        $(".date").append(date);
+
+        const name = (dbData.name);
+        $(".name").append(name);
+
+
+      
+        
 
         dbData.exercises.forEach(exercise => {
           // console.log(exercise);
           let dbWo =
-          `<div class="container-fluid text-center">
-          <div>
-            <h5>${exercise.muscle_group}</h5>
-            <h5>${exercise.exercise_name}</h5>
-          </div>`;
+          `<p class ="specific-exercise-margin">
+          <br>
+          ${exercise.specific_exercise}
+          </p>`;
+
+
           
           exercise.sets.forEach(set => {
-            dbWo += `${set.reps} reps x ${set.weight} lbs</div><br>`
+
+            
+            dbWo += `<pre>${set.reps} reps x ${set.weight} lbs</pre>`
           });
           $(".center-div").append(dbWo);
         })
