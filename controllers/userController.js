@@ -5,7 +5,7 @@ module.exports = {
     db
       .Users
       .findAll({
-        attributes: ["id", "first_name", "last_name", "full_name", "username"],
+        attributes: ["id", "first_name", "last_name", "age", "where_from", "bio", "picture", "full_name", "username"],
         include: [db.Workouts]
       })
       .then(dbUsers => res.json(dbUsers))
@@ -14,11 +14,12 @@ module.exports = {
         res.status(500).json(err);
       });
   },
+  
   findByName: function (req, res) {
     db
       .Users
       .findOne({
-        attributes: ["id", "first_name", "last_name", "full_name", "username"],
+        attributes: ["id", "first_name", "last_name", "age", "where_from", "bio", "picture", "full_name", "username"],
         where: {
           username: req.params.username
         },
@@ -30,6 +31,7 @@ module.exports = {
         res.status(404).json(err);
       });
   },
+ 
   userCheck: function (req, res) {
     if (req.user) {
       return res.json(req.user);
@@ -38,6 +40,7 @@ module.exports = {
       return res.status(422).json({ error: "Not logged in!" })
     }
   },
+
   update: function (req, res) {
     db
       .Users
@@ -52,6 +55,7 @@ module.exports = {
         res.status(500).json(err);
       });
   },
+  
   delete: function (req, res) {
     db
       .Users

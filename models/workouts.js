@@ -12,7 +12,6 @@ module.exports = function (sequelize, DataTypes) {
       required: true
 
     },
-      
 
     exercises: {
       type: DataTypes.TEXT,

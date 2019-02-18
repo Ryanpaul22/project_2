@@ -8,7 +8,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
   // the date to today's date.
   var calendar = new Y.Calendar({
     contentBox: "#mycalendar",
-    width: '600px',
+    width: '250px',
     showPrevMonth: true,
     showNextMonth: true,
     date: new Date()
@@ -68,9 +68,6 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
 
           let dbData = results[i];
           
-
-          
-
           dbData.exercises.forEach(exercise => {
 
 
