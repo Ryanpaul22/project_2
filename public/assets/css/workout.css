@@ -16,7 +16,6 @@ body {
   font-family: 'Poppins', sans-serif;
   color: grey;
   background-color: rgba(159, 144, 243, 0.13);
-  /* background-color: rgb(253, 253, 253); */
 }
 
 #createWo {
@@ -47,7 +46,6 @@ div {
   color: white;
 }
 
-
 .btn:hover { 
   background-color:rgba(159, 144, 243, 0.863);
   border-color: yellow;
@@ -60,14 +58,12 @@ option value {
   background-color:rgba(159, 144, 243, 0.863);
 }
 
-
 .form-control:hover{
   background-color: yellow;
   opacity: .55;
   color: black;
   font-weight: bolder;
   border: 2.5px dotted mediumslateblue;
-
 }
 
 .muscle-group {

@@ -7,7 +7,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton',  function(Y) {
   // the date to today's date.
   var calendar = new Y.Calendar({
     contentBox: "#mycalendar",
-    width:'600px',
+    width:'250px',
     showPrevMonth: true,
     showNextMonth: true,
     date: new Date()}).render();
@@ -46,11 +46,8 @@ YUI().use('calendar', 'datatype-date', 'cssbutton',  function(Y) {
 
     //Y.one("#selecteddate").setHTML(dt.format(formatDate));
     
-    
   });
   
-
-
   // When the 'Show Previous Month' link is clicked,
   // modify the showPrevMonth property to show or hide
   // previous month's dates

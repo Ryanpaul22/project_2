@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="animate.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="./assets/css/profile.css">
-  
+  <link rel="stylesheet" href="./assets/css/calendar.css">
+
   <title>Your Profile</title>
 </head>
 
@@ -21,7 +22,7 @@
     <div class="nav mx-auto">
       <span style="font-size: 3rem;">
         <div class="nav-item">
-          <a class="nav-link fa fa-calendar topIcons" style="color: Mediumslateblue;" href="/calendar"></a>
+          <a class="nav-link fas fa-dumbbell topIcons" style="color: Mediumslateblue;" href="/workout-form"></a>
         </div>
     </div>
     <div class="nav mx-auto">
@@ -57,31 +58,42 @@
     <div class="card-deck animated pulse infinite slower">
       <div class="card shadow-lg">
         <div class="card-body">
-          
-          <h3 class="card-title text-center">User Profile</h3>
+
+          <h3 class="card-title text-center">About Me</h3>
           <br>
           <div class="card shadow-lg imageDiv">
+            <img src="./assets/images/aliens-vector-colored-2.png" alt="Card image">
             <div class="card-body shadow-lg">
-              <div class="center-text container-fluid"> Anthony Amaral 
+              <div class="userIfno">
               </div>
             </div>
-            <img src="./assets/images/whatev.jpg" style="size:200px" alt="Card image">
-            <div class="card-body center-text">
-              <p class="card-text">Workout Objectives</p>
-              <p class="card-text center-text">Email and other contact items</p>
-            </div>
           </div>
         </div>
         <div class="card-footer"></div>
       </div>
       <div class="card shadow-lg">
         <div class="card-body">
-          
-          <h3 class="card-title text-center">Add Workout</h3>
+
+          <h3 class="card-title text-center">Calendar</h3>
           <br>
           <div class="nav-item text-center">
-            <span style="font-size: 3rem;">
-              <a class="nav-link fas fa-dumbbell topIcons" style="color: Mediumslateblue;" href="/workout-form"></a>
+            <div class="container">
+              <div id="demo" class="yui3-skin-sam yui3-g">
+                <!-- You need this skin class -->
+
+                <div id="leftcolumn" class="yui3-u">
+                  <!-- Container for the calendar -->
+                  <div id="mycalendar"></div>
+                </div>
+                <div id="rightcolumn" class="yui3-u">
+                  <div id="links" style="padding-left:20px;">
+                    <!-- The buttons are created simply by assigning the correct CSS class -->
+
+                    Selected date: <span id="selecteddate"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <br>
         </div>
@@ -89,7 +101,7 @@
       </div>
       <div class="card shadow-lg">
         <div class="card-body">
-          
+
           <h3 class="card-title text-center">Most Recent Workout</h3>
           <br>
           <h3 class="text-center name"></h3>
@@ -128,11 +140,14 @@
     </div>
   </footer>
 
+  <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="assets/js/profile.js"></script>
+  <script src="assets/js/calendar.js"></script>
 
 </body>
 

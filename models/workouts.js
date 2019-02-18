@@ -10,8 +10,8 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.TEXT,
       defaultValue: DataTypes.TEXT,
       required: true
+
     },
-      
 
     exercises: {
       type: DataTypes.TEXT,

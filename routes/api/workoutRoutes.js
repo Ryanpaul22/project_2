@@ -21,5 +21,4 @@ router
   .put(workoutController.update)
   .delete(workoutController.delete);
 
-
 module.exports = router;

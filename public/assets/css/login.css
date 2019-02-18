@@ -14,7 +14,6 @@ body {
   background-color: yellow;
 }
 
-
 .jumboContainer {
   border-radius: 10px;
   background: #EEEBD1;
@@ -23,7 +22,6 @@ body {
   background: linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
   border: 4px double rgba(58, 22, 233, 0.36);
   width: 80%;
-
 }
 
 .insideContainer {
@@ -46,7 +44,6 @@ div {
   color: white;
 }
 
-
 .btn:hover { 
   background-color:rgba(159, 144, 243, 0.863);
   border-color: yellow;
@@ -58,7 +55,6 @@ div {
 option value {
   background-color:rgba(159, 144, 243, 0.863);
 }
-
 
 .form-control:hover{
   background-color: yellow;
