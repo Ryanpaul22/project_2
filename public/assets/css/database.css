@@ -1,0 +1,134 @@
+.fixed-top {
+  background-color: rgb(253, 253, 253);
+  /* opacity: .95; */
+  border-radius: 10px;
+  border: 3%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: grey;
+  background-image: url(../images/tony-weight-logo-mediumslateblue.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: rgb(253, 253, 253);
+}
+
+.jumbotron-fluid {
+  background-color: rgb(253, 253, 253);
+}
+
+.banner {
+  font-weight: bolder;
+  font-stretch: extra-expanded;
+  opacity: .95;
+  font-size: 30px;
+  color: mediumslateblue;
+  background: #EEEBD1;
+  background: -moz-linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  background: -webkit-linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  background: linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  border: 6px double rgba(58, 22, 233, 0.36);
+  border-radius: 10px;
+  border: 2%;
+}
+
+img {
+  color: mediumslateblue;
+  background: #EEEBD1;
+  background: -moz-linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  background: -webkit-linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  background: linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  border: 4px double rgba(58, 22, 233, 0.36);
+  border-radius: 10px;
+  max-height: 200px;
+}
+
+.card {
+  border-radius: 10px;
+  font-size: 15px;
+  margin: 2px;
+  background: #EEEBD1;
+  background: -moz-linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  background: -webkit-linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  background: linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  border: 2.5px dotted mediumslateblue;
+  
+}
+
+.col {
+  font-size: 15px;
+}
+
+h4 {
+  margin: 2%;
+}
+
+/* .card-body {
+  border: 4px double rgba(58, 22, 233, 0.36);
+  border-radius: 10px;
+} */
+
+/* .card-title {
+  text-align: center;
+  background: #EEEBD1;
+  background: -moz-linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  background: -webkit-linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  background: linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  border-radius: 10px;
+  color: rgba(32, 6, 102, 0.733);
+  padding: 2%;
+  border: 3px dotted mediumslateblue;
+} */
+
+
+.topIcons:hover {
+  background-color: rgb(252, 248, 22);
+  border-radius: 10px;
+  border: solid 3.5px rgb(97, 51, 156);
+  transition: border-width 0.6s linear;
+}
+
+/* #LB:hover {
+  border-bottom: 1px solid #ddd9ec;
+  color: #e9e5d5;
+  padding-bottom: .25em;
+  text-decoration: none;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 20%;
+  border-bottom: 0;
+  padding-bottom: 1em;
+  text-decoration: none;
+} */
+
+.footer {
+  background-color: mediumslateblue;
+  padding: 1.5%;
+  opacity: .95;
+  border-radius: 10px;
+}
+
+.card-footer  {
+  border: 2px dotted rgba(58, 22, 233, 0.36);
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.267);
+}
+
+.socIcon:hover {
+  background-color: rgb(80, 80, 75);
+  border-radius: 10px;
+  border: solid 3.5px rgb(243, 239, 21);
+  transition: border-width 0.6s linear;
+}
+
+.imageDiv {
+  border: 4px double rgba(58, 22, 233, 0.36);
+  border-radius: 10px;
+}
+
+
+
+/* font-family: 'Righteous', cursive; */
+/* font-family: 'Fahkwang', sans-serif; */
