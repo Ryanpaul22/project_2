@@ -3,7 +3,6 @@ const $workoutForm = $("#workout-form");
     const $addExercise = $("#add-exercise");
     const $exerciseDiv = $("#extra-exercise");
     
-
     $("#chest").hide();
     $("#back").hide();
     $("#shoulder").hide();
@@ -22,7 +21,6 @@ const $workoutForm = $("#workout-form");
       $(this).parent(".exercise").find("#arm").hide();
       $(this).parent(".exercise").find("#leg").hide();
       $(this).parent(".exercise").find("#abdominal").hide();
-
 
     }
     if ($muscleGroup === "Chest") {
@@ -76,13 +74,9 @@ const $workoutForm = $("#workout-form");
       $(this).parent(".exercise").find("#back").remove();
       $(this).parent(".exercise").find("#arm").remove();
       $(this).parent(".exercise").find("#leg").remove();
-     
-
     }
     console.log($muscleGroup);
-    ;
   }
- 
   
     // for performance reasons, immediately make an empty copy of the first exercise form elements so we can use it to create new inputs
     const $exerciseTemplate = $("#main-exercise").clone();
@@ -115,11 +109,6 @@ const $workoutForm = $("#workout-form");
         name:  $(this).find("#exercise-name").val().trim(),
         exercises: []
       }
-
-    
-      
-
-
   
     $(this).find(".exercise").each(function(i) {
       const exerciseData = {
@@ -157,9 +146,13 @@ const $workoutForm = $("#workout-form");
 
 
   
+  function pageRelocate() {
+    window.location.replace("./../../profile.html");
+  }
+
   $addExercise.on("click", addExercise);
   $(document).on("click", '.add-set', addSet);
   $workoutForm.on("submit", collectData);
-
-//})
+  $workoutForm.on("submit", pageRelocate);
+  
 

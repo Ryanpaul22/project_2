@@ -5,15 +5,13 @@ $(document).ready(function() {
       method: "GET"
     }).then(function(response) {
       var userIfno =  
-      
     
-    `<h6>Name: ${response.full_name}</h6>
-    <h6>Email: ${response.email}</h6>
-    <h6>Age: ${response.age}</h6>
-    <h6>From: ${response.where_from}</h6>
-    <h6>Bio: ${response.bio}</h6>`
-    ;
-
+      `<h6>Name: ${response.full_name}</h6>
+      <h6>Email: ${response.email}</h6>
+      <h6>Age: ${response.age}</h6>
+      <h6>From: ${response.where_from}</h6>
+      <h6>Bio: ${response.bio}</h6>`;
+    
     $(".userIfno").append(userIfno);
 
       // var userPicture =
@@ -40,7 +38,6 @@ $(document).ready(function() {
         console.log(date);
         // let nameWO = dbData.
         $(".dateDiv").append(date);
- 
  
         dbData.exercises.forEach(exercise => {
           // console.log(exercise);

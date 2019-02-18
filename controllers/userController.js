@@ -14,6 +14,7 @@ module.exports = {
         res.status(500).json(err);
       });
   },
+  
   findByName: function (req, res) {
     db
       .Users
@@ -30,6 +31,7 @@ module.exports = {
         res.status(404).json(err);
       });
   },
+ 
   userCheck: function (req, res) {
     if (req.user) {
       return res.json(req.user);
@@ -53,6 +55,7 @@ module.exports = {
         res.status(500).json(err);
       });
   },
+  
   delete: function (req, res) {
     db
       .Users
