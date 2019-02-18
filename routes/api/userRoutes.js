@@ -12,6 +12,7 @@ router
   .route('/status')
   .get(userController.userCheck);
 
+
 router
   .route('/login')
   .post(passport.authenticate('local'), userController.login);
