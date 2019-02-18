@@ -5,7 +5,6 @@ $(document).ready(function() {
       method: "GET"
     }).then(function(response) {
       var userIfno =  
-<<<<<<< HEAD
     
       `<h6>Name: ${response.full_name}</h6>
       <h6>Email: ${response.email}</h6>
@@ -13,17 +12,6 @@ $(document).ready(function() {
       <h6>From: ${response.where_from}</h6>
       <h6>Bio: ${response.bio}</h6>`;
     
-=======
-      
-    
-    `<h6>Name: ${response.full_name}</h6>
-    <h6>Email: ${response.email}</h6>
-    <h6>Age: ${response.age}</h6>
-    <h6>From: ${response.where_from}</h6>
-    <h6>Bio: ${response.bio}</h6>`
-    ;
-
->>>>>>> e1e6b79ba106a316b2744f98505e0b2128b7b86a
     $(".userIfno").append(userIfno);
 
       // var userPicture =
@@ -51,10 +39,6 @@ $(document).ready(function() {
         // let nameWO = dbData.
         $(".dateDiv").append(date);
  
-<<<<<<< HEAD
-=======
- 
->>>>>>> e1e6b79ba106a316b2744f98505e0b2128b7b86a
         dbData.exercises.forEach(exercise => {
           // console.log(exercise);
           let dbWo =
