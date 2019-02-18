@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   function printWorkout() {
     $.ajax({
       url: "api/workouts",
@@ -14,8 +14,8 @@ $(document).ready(function () {
         console.log(date);
         // let nameWO = dbData.
         $(".dateDiv").append(date);
-
-
+      
+        
         dbData.exercises.forEach(exercise => {
           // console.log(exercise);
           let dbWo =
@@ -24,7 +24,7 @@ $(document).ready(function () {
           <div>
           <h5>${exercise.specific_exercise}</h5>
           </div>`;
-
+          
           exercise.sets.forEach(set => {
             dbWo += `${set.reps} reps x ${set.weight} lbs<br></div>`
           });

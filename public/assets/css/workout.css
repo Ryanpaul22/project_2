@@ -66,6 +66,7 @@ option value {
   opacity: .55;
   color: black;
   font-weight: bolder;
+  border: 2.5px dotted mediumslateblue;
 
 }
 

@@ -24,7 +24,6 @@ body {
   font-weight: bolder;
   font-stretch: extra-expanded;
   opacity: .95;
-  font-weight: bolder;
   font-size: 30px;
   color: mediumslateblue;
   background: #EEEBD1;
@@ -49,6 +48,11 @@ img {
   border-radius: 10px;
 }
 
+.card-body {
+  border: 4px double rgba(58, 22, 233, 0.36);
+  border-radius: 10px;
+}
+
 .card-title {
   text-align: center;
   background: #EEEBD1;
@@ -57,7 +61,8 @@ img {
   background: linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
   border-radius: 10px;
   color: rgba(32, 6, 102, 0.733);
-  padding: 1%;
+  padding: 2%;
+  border: 3px dotted mediumslateblue;
 }
 
 
@@ -89,6 +94,12 @@ img {
   border-radius: 10px;
 }
 
+.card-footer  {
+  border: 2px dotted rgba(58, 22, 233, 0.36);
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.267);
+}
+
 .socIcon:hover {
   background-color: rgb(80, 80, 75);
   border-radius: 10px;
@@ -96,7 +107,10 @@ img {
   transition: border-width 0.6s linear;
 }
 
-.imageDiv {border: 4px double rgba(58, 22, 233, 0.36);}
+.imageDiv {
+  border: 4px double rgba(58, 22, 233, 0.36);
+  border-radius: 10px;
+}
 
 /* font-family: 'Righteous', cursive; */
 /* font-family: 'Fahkwang', sans-serif; */

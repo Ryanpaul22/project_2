@@ -1,4 +1,5 @@
-const $workoutForm = $("#workout-form");
+$(document).ready(function() {   
+    const $workoutForm = $("#workout-form");
     const $addExercise = $("#add-exercise");
     const $exerciseDiv = $(".exercise");
     $("#chest").hide();
@@ -107,7 +108,7 @@ const $workoutForm = $("#workout-form");
     
       
   
-    $(this).find(".exercise").each(function(i) {
+    $(".exercise").each(function(i) {
       const exerciseData = {
         // exercise_name: $(this).find("#exercise-name").val().trim(),
         muscle_group: $(this).find("#muscle-group").val().trim(),
@@ -144,4 +145,4 @@ const $workoutForm = $("#workout-form");
   $addExercise.on("click", addExercise);
   $(document).on("click", '.add-set', addSet);
   $workoutForm.on("submit", collectData);
-//})
+})
