@@ -143,8 +143,13 @@ const $workoutForm = $("#workout-form");
     });
   }
   
+  function pageRelocate() {
+    window.location.replace("./../../profile.html");
+  }
+
   $addExercise.on("click", addExercise);
   $(document).on("click", '.add-set', addSet);
   $workoutForm.on("submit", collectData);
-
+  $workoutForm.on("submit", pageRelocate);
+  
 
