@@ -3,10 +3,6 @@ const $workoutForm = $("#workout-form");
     const $addExercise = $("#add-exercise");
     const $exerciseDiv = $("#extra-exercise");
     
-<<<<<<< HEAD
-=======
-
->>>>>>> e1e6b79ba106a316b2744f98505e0b2128b7b86a
     $("#chest").hide();
     $("#back").hide();
     $("#shoulder").hide();
@@ -26,10 +22,6 @@ const $workoutForm = $("#workout-form");
       $(this).parent(".exercise").find("#leg").hide();
       $(this).parent(".exercise").find("#abdominal").hide();
 
-<<<<<<< HEAD
-=======
-
->>>>>>> e1e6b79ba106a316b2744f98505e0b2128b7b86a
     }
     if ($muscleGroup === "Chest") {
       $(this).parent(".exercise").find("#chest").show();
@@ -82,11 +74,6 @@ const $workoutForm = $("#workout-form");
       $(this).parent(".exercise").find("#back").remove();
       $(this).parent(".exercise").find("#arm").remove();
       $(this).parent(".exercise").find("#leg").remove();
-<<<<<<< HEAD
-=======
-     
-
->>>>>>> e1e6b79ba106a316b2744f98505e0b2128b7b86a
     }
     console.log($muscleGroup);
   }
@@ -122,14 +109,6 @@ const $workoutForm = $("#workout-form");
         name:  $(this).find("#exercise-name").val().trim(),
         exercises: []
       }
-<<<<<<< HEAD
-=======
-
-    
-      
-
-
->>>>>>> e1e6b79ba106a316b2744f98505e0b2128b7b86a
   
     $(this).find(".exercise").each(function(i) {
       const exerciseData = {
@@ -174,11 +153,6 @@ const $workoutForm = $("#workout-form");
   $addExercise.on("click", addExercise);
   $(document).on("click", '.add-set', addSet);
   $workoutForm.on("submit", collectData);
-<<<<<<< HEAD
   $workoutForm.on("submit", pageRelocate);
   
-=======
-
-//})
->>>>>>> e1e6b79ba106a316b2744f98505e0b2128b7b86a
 
