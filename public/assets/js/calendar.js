@@ -1,5 +1,6 @@
 YUI().use('calendar', 'datatype-date', 'cssbutton',  function(Y) {
         
+
   // Create a new instance of calendar, placing it in
   // #mycalendar container, setting its width to 340px,
   // the flags for showing previous and next month's
@@ -63,4 +64,5 @@ YUI().use('calendar', 'datatype-date', 'cssbutton',  function(Y) {
     ev.preventDefault();
     calendar.set('showNextMonth', !(calendar.get("showNextMonth")));
   });
+
 });

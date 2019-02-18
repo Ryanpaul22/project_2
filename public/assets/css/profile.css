@@ -94,10 +94,16 @@ img {
   transition: border-width 0.6s linear;
 }
 
+<<<<<<< HEAD
 .imageDiv {
   border: 4px double rgba(58, 22, 233, 0.36);
   border-radius: 10px;
 }
+=======
+
+.imageDiv {border: 4px double rgba(58, 22, 233, 0.36);}
+>>>>>>> e1e6b79ba106a316b2744f98505e0b2128b7b86a
+
 
 /* font-family: 'Righteous', cursive; */
 /* font-family: 'Fahkwang', sans-serif; */
