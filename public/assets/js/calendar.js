@@ -8,7 +8,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
   // the date to today's date.
   var calendar = new Y.Calendar({
     contentBox: "#mycalendar",
-    width: '250px',
+    width: '400',
     showPrevMonth: true,
     showNextMonth: true,
     date: new Date()
@@ -47,6 +47,8 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
     // Format the date and output it to a DOM
     // element.
     Y.one("#selecteddate").setHTML(theDate);
+    $("#date-div").empty();
+    $("#date-div").append(`<h3>${theDate}</h3>`);
 
 
     $.ajax({
@@ -79,8 +81,9 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
 
 
             let workoutName = results[i].name;
+            
             $("#workout-name").append(`
-            <h3>Workout Name: ${workoutName}</h3>
+            <h3>${workoutName}</h3>
             `);
 
           let dbData = results[i];
@@ -98,8 +101,8 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
             //console.log("Sets:" + setCount);
             $("#exercise-div").append(`
             <br>
-            <h4>Exercise Name: ${exerciseName}</h4>
-            <h5>Sets: ${setsCount}</h5>
+            <h4>${exerciseName}</h4>
+            
             `)
 
             //console.log(exercise.sets); 
@@ -116,8 +119,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
               //APPEND================================
 
               $("#exercise-div").append(`
-              <p>Reps: ${repsCount}</p>
-              <p>Weight: ${weightCount} lbs</p>
+              <div>Reps: ${repsCount} x Weight: ${weightCount} lbs</div>
               `)
 
             })

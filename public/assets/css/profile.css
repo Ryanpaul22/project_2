@@ -9,7 +9,7 @@ body {
   color: grey;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-color: rgb(253, 253, 253);
+  background-image: url(../images/tony-weight-logo-mediumslateblue.png);
 }
 
 #buddy {
@@ -98,6 +98,28 @@ img {
   border: 4px double rgba(58, 22, 233, 0.36);
   border-radius: 10px;
 }
+
+.center-div, .name, .dateDiv, h6, .container {
+  color: mediumslateblue;
+}
+
+#rightcolumn {
+  text-align: center;
+}
+
+#selecteddate {
+  display: none;
+}
+
+#main-calendar-div, #demo {
+  align-content: center;
+}
+
+#rightcolumn {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
 
 
 /* font-family: 'Righteous', cursive; */
