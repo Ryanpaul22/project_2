@@ -50,6 +50,19 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
     $("#date-div").empty();
     $("#date-div").append(`<h3>${theDate}</h3>`);
 
+    $.ajax({
+      url: "api/users/status",
+      method: "GET"
+    }).then(function (userResult) {
+      //console.log(userResult.id);
+      let activeUser = userResult.id;
+      console.log(activeUser);
+     // for (let e = 0; e < userResult.length; e++) {
+        //let eachUser = userResult[e].id
+       // console.log(userResult[e].id);
+     // }
+    
+
 
     $.ajax({
       url: "api/users/status",
@@ -74,7 +87,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
 
         for (let i = 0; i < results.length; i++) {
           //console.log(results[i]);
-          let userWorkoutId = results[i].UserId
+          let userWorkoutId = results[i].UserId;
           console.log(userWorkoutId);
           
           if (results[i].date === theDate && activeUser === userWorkoutId) {
@@ -83,7 +96,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
             let workoutName = results[i].name;
             
             $("#workout-name").append(`
-            <h3>${workoutName}</h3>
+            <h5>${workoutName}</h5>
             `);
 
           let dbData = results[i];
@@ -97,12 +110,11 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
 
 
             // set count
-            let setsCount = exercise.sets.length;
+          //  let setsCount = exercise.sets.length;
             //console.log("Sets:" + setCount);
             $("#exercise-div").append(`
             <br>
-            <h4>${exerciseName}</h4>
-            
+            <p>${exerciseName}</p>
             `)
 
             //console.log(exercise.sets); 
@@ -149,3 +161,4 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
 
   })
 });
+})
