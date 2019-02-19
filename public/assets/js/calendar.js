@@ -107,7 +107,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
 
 
             // set count
-            let setsCount = exercise.sets.length;
+          //  let setsCount = exercise.sets.length;
             //console.log("Sets:" + setCount);
             $("#exercise-div").append(`
             <br>
@@ -158,3 +158,4 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
 
   })
 });
+})
