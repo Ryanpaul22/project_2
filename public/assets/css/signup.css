@@ -1,7 +1,7 @@
 .jumbotron {
   animation-delay: .2s;
-  border: 2.5px dotted mediumslateblue;
-  background-color: rgb(252, 252, 140);
+  /* border: 2.5px dotted mediumslateblue; */
+  /* background-color: rgb(252, 252, 140); */
 }
 
 h3 {
@@ -11,8 +11,8 @@ h3 {
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: grey;
-  background-color:white;
+  /* color: grey;
+  background-color:white; */
 }
 
 .jumboContainer {

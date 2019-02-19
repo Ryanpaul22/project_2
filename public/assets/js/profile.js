@@ -1,8 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
   function printUser() {
     $.ajax({
       url: "api/users/status",
       method: "GET"
+
     }).then(function(response) {
       var userIfno =  
     
@@ -16,19 +17,23 @@ $(document).ready(function() {
     
     $(".userIfno").append(userIfno);
 
+
       // var userPicture =
 
       // `<img src="${response.picture} height="50" width="50">`
       // ;
 
-      
-    })};
-      printUser();
 
-    function printWorkout() {
+    })
+  };
+  printUser();
+
+  function printWorkout() {
+    
     $.ajax({
-      url: "api/workouts",
+      url: "api/users/status",
       method: "GET"
+
     }).then(function (results) {
       for (let i = results.length - 1; i < results.length; i++) {
  
@@ -49,27 +54,17 @@ $(document).ready(function() {
           <div>
           <h5><b>${exercise.specific_exercise}<b></h5>
           </div>`;
+
  
-          exercise.sets.forEach(set => {
-            dbWo += `${set.reps} reps x ${set.weight} lbs<br></div>`
-          });
-          $(".center-div").append(dbWo);
-        })
-      }
-    })
+        };
+    
+      };
+      };
+    }); 
+
+      });
+    });
   }
   printWorkout();
-
-  // function currentUserWorkouts() {
-  // $.ajax({
-  //   url: "api/users/status",
-  //   method: "GET"
-  // }).then(function (first) {
-  //   var firstId = (first.id);
-  //   $.ajax({
-  //     url: "api/workouts",
-  //     method: "GET"
-  //   }).then (function (second) {})
-
-  // })}
-})
+});
+  

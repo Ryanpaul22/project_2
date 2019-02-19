@@ -8,7 +8,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
   // the date to today's date.
   var calendar = new Y.Calendar({
     contentBox: "#mycalendar",
-    width: '250px',
+    width: '350',
     showPrevMonth: true,
     showNextMonth: true,
     date: new Date()
@@ -47,23 +47,57 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
     // Format the date and output it to a DOM
     // element.
     Y.one("#selecteddate").setHTML(theDate);
+    $("#date-div").empty();
+    $("#date-div").append(`<h4>${theDate}</h4>`);
+
+    $.ajax({
+      url: "api/users/status",
+      method: "GET"
+    }).then(function (userResult) {
+      //console.log(userResult.id);
+      let activeUser = userResult.id;
+      console.log(activeUser);
+     // for (let e = 0; e < userResult.length; e++) {
+        //let eachUser = userResult[e].id
+       // console.log(userResult[e].id);
+     // }
+    
+
+
+    $.ajax({
+      url: "api/users/status",
+      method: "GET"
+    }).then(function (userResult) {
+      //console.log(userResult.id);
+      let activeUser = userResult.id;
+      console.log(activeUser);
+     // for (let e = 0; e < userResult.length; e++) {
+        //let eachUser = userResult[e].id
+       // console.log(userResult[e].id);
+     // }
+    
 
 
     $.ajax({
       url: "api/workouts",
       method: "GET"
     }).then(function (results) {
-      //console.log(results);
+     // console.log(results);
 
 
         for (let i = 0; i < results.length; i++) {
+          //console.log(results[i]);
+          let userWorkoutId = results[i].UserId;
+          console.log(userWorkoutId);
           
-          if (results[i].date === theDate) {
-           // console.log(results[i].date);
+          if (results[i].date === theDate && activeUser === userWorkoutId) {
+
 
             let workoutName = results[i].name;
+
             $("#workout-name").append(`<br>
             <h4><b>${workoutName}<b></h4>
+
             `);
 
           let dbData = results[i];
@@ -77,11 +111,13 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
 
 
             // set count
-            let setsCount = exercise.sets.length;
+          //  let setsCount = exercise.sets.length;
             //console.log("Sets:" + setCount);
             $("#exercise-div").append(`<br>
+
             <h6><b>Exercise Name:<br> ${exerciseName}<b></h6>
             <h6><u>Sets: ${setsCount}<u></h6>
+
             `)
 
             //console.log(exercise.sets); 
@@ -98,8 +134,10 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
               //APPEND================================
 
               $("#exercise-div").append(`
+
                 ${repsCount} reps x
                 ${weightCount} lbs<br>
+
               `)
 
             })
@@ -107,6 +145,8 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
         } 
        } 
       });
+  
+  });
 
 
     // When the 'Show Previous Month' link is clicked,
@@ -124,5 +164,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
       ev.preventDefault();
       calendar.set('showNextMonth', !(calendar.get("showNextMonth")));
     });
+
   })
 });
+})
