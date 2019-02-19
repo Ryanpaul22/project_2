@@ -72,15 +72,15 @@ $(document).ready(function () {
         //  console.log(resDates.exercises[i]);
          // console.log(resDates.date)
           console.log(resDates.exercises[i].specific_exercise);
-          $(".center-div").append(`
-          <p>${resDates.exercises[i].specific_exercise}</p>
+          $(".center-div").append(`<br>
+        <h6>${resDates.exercises[i].specific_exercise}</h6>
           `)
           console.log(resDates.exercises[i].sets);
           sets = resDates.exercises[i].sets;
           sets.forEach(set => {
             $(".center-div").append(`
-            <p>${set.reps} reps x ${set.weight} lbs
-            `)
+            <div>${set.reps} reps x ${set.weight} lbs
+            </div>`)
           })
  
         };

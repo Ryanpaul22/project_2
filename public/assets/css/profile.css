@@ -117,9 +117,14 @@ img {
 
 #rightcolumn {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  /* display: none; */
 }
 
+#make-this-wide {
+  font-stretch: expanded;
+  text-align: center;
+  
+}
 
 
 /* font-family: 'Righteous', cursive; */

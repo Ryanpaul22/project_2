@@ -48,7 +48,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
     // element.
     Y.one("#selecteddate").setHTML(theDate);
     $("#date-div").empty();
-    $("#date-div").append(`<h3>${theDate}</h3>`);
+    $("#date-div").append(`<h4>${theDate}</h4>`);
 
     $.ajax({
       url: "api/users/status",
@@ -96,7 +96,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
             let workoutName = results[i].name;
             
             $("#workout-name").append(`
-            <h5>${workoutName}</h5>
+            <h2>${workoutName}</h2>
             `);
 
           let dbData = results[i];
@@ -112,9 +112,9 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
             // set count
           //  let setsCount = exercise.sets.length;
             //console.log("Sets:" + setCount);
-            $("#exercise-div").append(`
-            <br>
-            <p>${exerciseName}</p>
+            $("#exercise-div").append(`<br>
+           
+            <div>${exerciseName}</div>
             `)
 
             //console.log(exercise.sets); 
@@ -131,7 +131,8 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
               //APPEND================================
 
               $("#exercise-div").append(`
-              <div>Reps: ${repsCount} x Weight: ${weightCount} lbs</div>
+              <div>${repsCount} reps x ${weightCount} lbs</div>
+              
               `)
 
             })
