@@ -1,5 +1,5 @@
 .jumbotron {
-  animation-delay: .2s;
+  /* animation-delay: .2s; */
   border: 2.5px dotted mediumslateblue;
 }
 
@@ -11,7 +11,7 @@ h3 {
 body {
   font-family: 'Poppins', sans-serif;
   color: grey;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .jumboContainer {
@@ -26,7 +26,7 @@ body {
 
 .insideContainer {
   border: 2.5px dotted mediumslateblue;
-  animation-delay: 1.5s;
+  /* animation-delay: 1.5s; */
   width: 80%;
 }
 
@@ -84,7 +84,7 @@ select:hover {
 }
 
 .footer {
-  background-color: yellow;
+  align-content: center;
 }
 
 .socIcon:hover {
@@ -93,6 +93,16 @@ select:hover {
   border: solid 3.5px rgb(97, 51, 156);
   transition: border-width 0.6s linear;
   border-radius: 10px;
+}
+
+#login-div {
+  border-radius: 10px;
+  background: #EEEBD1;
+  background: -moz-linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  background: -webkit-linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  background: linear-gradient(45deg, #EEEBD1 0%, #F5F5F6 50%, #EADDEC 100%);
+  border: 4px double rgba(58, 22, 233, 0.36);
+  width: 65%;
 }
 
 /* font-family: 'Righteous', cursive; */
