@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS LiftBuddy_db;
 CREATE DATABASE LiftBuddy_db;
-DROP DATABASE IF EXISTS iftBuddy_db;
+
 
 CREATE DATABASE sequelize_json;
 
@@ -18,9 +18,11 @@ CREATE TABLE workouts (
 );
 -- Insert a set of records.
 INSERT INTO exercise (chest, ) VALUES ("");
-INSERT INTO exercise (biseps, ) VALUES ("");
-INSERT INTO exercise (triceps, ) VALUES ("");
+INSERT INTO exercise (shoulders, ) VALUES ("");
+INSERT INTO exercise (legs, ) VALUES ("");
 INSERT INTO exercise (abs, ) VALUES ("");
+INSERT INTO exercise (arms, ) VALUES ("");
+INSERT INTO exercise (back, ) VALUES ("");
 
 -- just for push
   
