@@ -99,33 +99,21 @@ img {
   border-radius: 10px;
 }
 
-.center-div, .name, .dateDiv, h6, .container {
+
+#forEach {
+  font-family: 'Poppins', sans-serif;
+}
+
+#appendedInfo {
   color: mediumslateblue;
-}
-
-#rightcolumn {
-  text-align: center;
-}
-
-#selecteddate {
-  display: none;
-}
-
-#main-calendar-div, #demo {
-  align-content: center;
-}
-
-#rightcolumn {
-  text-align: center;
-  /* display: none; */
-}
-
-#make-this-wide {
-  font-stretch: expanded;
-  text-align: center;
-  
+  font-family: 'Poppins', sans-serif;
 }
 
 
+#appendedInfo2 {
+  color: mediumslateblue;
+  font-family: 'Poppins', sans-serif;
+}
 /* font-family: 'Righteous', cursive; */
 /* font-family: 'Fahkwang', sans-serif; */
+

@@ -60,6 +60,7 @@
         <div class="card-body">
           <h3 class="card-title text-center">About Me</h3>
           <br>
+          <br>
           <div class="card shadow-lg imageDiv">
             <img src="./assets/images/aliens-vector-colored-2.png" alt="Card image">
             <div class="card-body shadow-lg">
@@ -70,12 +71,15 @@
         </div>
         <div class="card-footer"></div>
       </div>
-      <div class="card shadow-lg" id= "main-calendar-div">
-        <div class="card-body id calendar-div">
 
+      <div class="card shadow-lg">
+        <div class="card-body">
           <h3 class="card-title text-center">Calendar</h3>
+          <br>
+          <br>
+          <div class="nav-item text-center">
+            <div class="container">
 
-            
               <div id="demo" class="yui3-skin-sam yui3-g">
                 <!-- You need this skin class -->
 
@@ -86,10 +90,13 @@
                 
                   <br>
                 <div id="rightcolumn" class="yui3-u">
-              
-                  <div class = "card-body-lg" id="make-this-wide">
-                    <span id="selecteddate"></span>
-                    <div class="container">
+
+                  <div id="links" style="padding-left:20px;">
+                    <!-- The buttons are created simply by assigning the correct CSS class -->
+
+                    Selected date: <span id="selecteddate"></span>
+                    <div class="container" id="appendedInfo">
+
                         <p id="workout-name"></p>
                         <p id="date-div"></p>
                         <p id="exercise-div"></p>
@@ -126,10 +133,13 @@
           <h3 class="card-title text-center">Most Recent Workout</h3>
 
           <br>
-          <h2 class="text-center name"></h2>
-          <h3 class="text-center dateDiv"></h3>
-          <div class="text-center center-div"></div>
 
+          <div id=appendedInfo2>
+          <h3 class="text-center dateDiv"></h3><br>
+          <h3 class="text-center name"></h3>
+
+          <div class="text-center center-div"></div>
+          </div>
         </div>
         <div class="card-footer"></div>
       </div>

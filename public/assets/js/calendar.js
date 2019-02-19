@@ -94,9 +94,10 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
 
 
             let workoutName = results[i].name;
-            
-            $("#workout-name").append(`
-            <h2>${workoutName}</h2>
+
+            $("#workout-name").append(`<br>
+            <h4><b>${workoutName}<b></h4>
+
             `);
 
           let dbData = results[i];
@@ -113,8 +114,10 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
           //  let setsCount = exercise.sets.length;
             //console.log("Sets:" + setCount);
             $("#exercise-div").append(`<br>
-           
-            <div>${exerciseName}</div>
+
+            <h6><b>Exercise Name:<br> ${exerciseName}<b></h6>
+            <h6><u>Sets: ${setsCount}<u></h6>
+
             `)
 
             //console.log(exercise.sets); 
@@ -131,8 +134,10 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
               //APPEND================================
 
               $("#exercise-div").append(`
-              <div>${repsCount} reps x ${weightCount} lbs</div>
-              
+
+                ${repsCount} reps x
+                ${weightCount} lbs<br>
+
               `)
 
             })
