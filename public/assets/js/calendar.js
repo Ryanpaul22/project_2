@@ -48,22 +48,38 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
     // element.
     Y.one("#selecteddate").setHTML(theDate);
 
+    $.ajax({
+      url: "api/users/status",
+      method: "GET"
+    }).then(function (userResult) {
+      //console.log(userResult.id);
+      let activeUser = userResult.id;
+      console.log(activeUser);
+     // for (let e = 0; e < userResult.length; e++) {
+        //let eachUser = userResult[e].id
+       // console.log(userResult[e].id);
+     // }
+    
+
 
     $.ajax({
       url: "api/workouts",
       method: "GET"
     }).then(function (results) {
-      //console.log(results);
+     // console.log(results);
 
 
         for (let i = 0; i < results.length; i++) {
+          //console.log(results[i]);
+          let userWorkoutId = results[i].UserId;
+          console.log(userWorkoutId);
           
-          if (results[i].date === theDate) {
-           // console.log(results[i].date);
+          if (results[i].date === theDate && activeUser === userWorkoutId) {
+
 
             let workoutName = results[i].name;
             $("#workout-name").append(`
-            <h3>Workout Name: ${workoutName}</h3>
+            <h5>${workoutName}</h5>
             `);
 
           let dbData = results[i];
@@ -81,8 +97,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
             //console.log("Sets:" + setCount);
             $("#exercise-div").append(`
             <br>
-            <h4>Exercise Name: ${exerciseName}</h4>
-            <h5>Sets: ${setsCount}</h5>
+            <p>${exerciseName}</p>
             `)
 
             //console.log(exercise.sets); 
@@ -99,8 +114,7 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
               //APPEND================================
 
               $("#exercise-div").append(`
-              <p>Reps: ${repsCount}</p>
-              <p>Weight: ${weightCount} lbs</p>
+              <p>Reps: ${repsCount} reps x ${weightCount} lbs</p>
               `)
 
             })
@@ -108,6 +122,8 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
         } 
        } 
       });
+  
+  });
 
 
     // When the 'Show Previous Month' link is clicked,
