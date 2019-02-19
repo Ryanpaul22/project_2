@@ -102,6 +102,16 @@ img {
 #forEach {
   font-family: 'Poppins', sans-serif;
 }
+
+#appendedInfo {
+  color: mediumslateblue;
+  font-family: 'Poppins', sans-serif;
+}
+
+#appendedInfo2 {
+  color: mediumslateblue;
+  font-family: 'Poppins', sans-serif;
+}
 /* font-family: 'Righteous', cursive; */
 /* font-family: 'Fahkwang', sans-serif; */
 
