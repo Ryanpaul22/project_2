@@ -42,6 +42,7 @@ img {
   border: 4px double rgba(58, 22, 233, 0.36);
   border-radius: 10px;
   max-height: 200px;
+  max-width: 50;
 }
 
 .card {

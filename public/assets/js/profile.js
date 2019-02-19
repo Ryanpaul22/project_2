@@ -6,11 +6,13 @@ $(document).ready(function() {
     }).then(function(response) {
       var userIfno =  
     
-      `<h6>Name: ${response.full_name}</h6>
-      <h6>Email: ${response.email}</h6>
-      <h6>Age: ${response.age}</h6>
-      <h6>From: ${response.where_from}</h6>
-      <h6>Bio: ${response.bio}</h6>`;
+      `<div class="center-text">
+      <h6><b>Name:</b> ${response.full_name}</span></h6>
+       <h6><b>Email:</b> <u>${response.email}</u></h6>
+       <h6><b>Age:</b> ${response.age}</h6>
+       <h6><b>From:</b> ${response.where_from}</h6>
+       <h6><b>Bio:</b> ${response.bio}</h6>
+       </div>`;
     
     $(".userIfno").append(userIfno);
 
@@ -31,10 +33,10 @@ $(document).ready(function() {
       for (let i = results.length - 1; i < results.length; i++) {
  
         let dbData = results[i];
-        //console.log(dbData);
-        const date = dbData.updatedAt.split("T").shift();
+        console.log(dbData);
+        const date = dbData.date;
         const name = (dbData.name);
-        $(".name").append(name);
+        $(".name").append(`<b>${name}<b>`);
         console.log(date);
         // let nameWO = dbData.
         $(".dateDiv").append(date);
@@ -42,10 +44,10 @@ $(document).ready(function() {
         dbData.exercises.forEach(exercise => {
           // console.log(exercise);
           let dbWo =
-            `<div class="container-fluid text-center">
+            `<div class="container-fluid text-center" id="forEach"> 
             <br>
           <div>
-          <h5>${exercise.specific_exercise}</h5>
+          <h5><b>${exercise.specific_exercise}<b></h5>
           </div>`;
  
           exercise.sets.forEach(set => {
