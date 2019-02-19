@@ -50,16 +50,33 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
 
 
     $.ajax({
+      url: "api/users/status",
+      method: "GET"
+    }).then(function (userResult) {
+      //console.log(userResult.id);
+      let activeUser = userResult.id;
+      console.log(activeUser);
+     // for (let e = 0; e < userResult.length; e++) {
+        //let eachUser = userResult[e].id
+       // console.log(userResult[e].id);
+     // }
+    
+
+
+    $.ajax({
       url: "api/workouts",
       method: "GET"
     }).then(function (results) {
-      //console.log(results);
+     // console.log(results);
 
 
         for (let i = 0; i < results.length; i++) {
+          //console.log(results[i]);
+          let userWorkoutId = results[i].UserId
+          console.log(userWorkoutId);
           
-          if (results[i].date === theDate) {
-           // console.log(results[i].date);
+          if (results[i].date === theDate && activeUser === userWorkoutId) {
+
 
             let workoutName = results[i].name;
             $("#workout-name").append(`
@@ -108,6 +125,8 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
         } 
        } 
       });
+  
+  });
 
 
     // When the 'Show Previous Month' link is clicked,
@@ -125,5 +144,6 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
       ev.preventDefault();
       calendar.set('showNextMonth', !(calendar.get("showNextMonth")));
     });
+
   })
 });
