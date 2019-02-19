@@ -21,7 +21,7 @@ $(document).ready(function () {
     })
       .then((userInfo) => {
         console.log(userInfo);
-        location.replace("../../login.html")
+        location.replace(userInfo)
       })
       .catch(err => console.log(err));
   });

@@ -63,6 +63,20 @@ YUI().use('calendar', 'datatype-date', 'cssbutton', function (Y) {
 
 
     $.ajax({
+      url: "api/users/status",
+      method: "GET"
+    }).then(function (userResult) {
+      //console.log(userResult.id);
+      let activeUser = userResult.id;
+      console.log(activeUser);
+     // for (let e = 0; e < userResult.length; e++) {
+        //let eachUser = userResult[e].id
+       // console.log(userResult[e].id);
+     // }
+    
+
+
+    $.ajax({
       url: "api/workouts",
       method: "GET"
     }).then(function (results) {
