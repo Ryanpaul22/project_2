@@ -14,6 +14,10 @@ router.route('/login').get((req, res) => {
   res.sendFile(path.join(__dirname, '../../public/login.html'));
 });
 
+router.route('/login2').get((req, res) => {
+  res.sendFile(path.join(__dirname, '../../index.html'));
+});
+
 router.route('/workout-form').get((req, res) => {
   if (!req.user) {
     return res.redirect('/login');
